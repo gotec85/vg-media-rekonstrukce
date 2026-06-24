@@ -39,21 +39,15 @@
     }
 
     .logo {
-      display: inline-flex;
-      align-items: baseline;
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 48px;
+      display: block;
+      margin: 0 auto 48px;
     }
-    .logo .vg {
-      background: var(--accent);
-      color: #fff;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-right: 8px;
+    .logo img {
+      display: block;
+      height: 56px;
+      width: auto;
+      margin: 0 auto;
     }
-    .logo .media { color: var(--accent); }
 
     .badge {
       display: inline-block;
@@ -118,7 +112,7 @@
 <body>
   <div class="wrap">
     <div class="logo">
-      <span class="vg">VG</span><span class="media">MEDIA</span>
+      <img src="logo.png" alt="VG Media">
     </div>
 
     <div class="badge">Připravujeme nový web</div>
