@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Media — Připravujeme nový web</title>
+  <meta name="description" content="Pracujeme na novém webu. Mezitím nás kontaktujte telefonicky nebo e-mailem.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #ffffff;
+      --accent: #CC0000;
+      --ink: #111111;
+      --gray: #555555;
+      --gray2: #888888;
+      --border: rgba(0,0,0,0.1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: baseline;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+    }
+    .logo .vg {
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-right: 8px;
+    }
+    .logo .media { color: var(--accent); }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: rgba(204,0,0,0.08);
+      border: 1px solid rgba(204,0,0,0.25);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    p.lead {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .contact a:hover { color: var(--accent); }
+    .contact svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 13px;
+      color: var(--gray2);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">
+      <span class="vg">VG</span><span class="media">MEDIA</span>
+    </div>
+
+    <div class="badge">Připravujeme nový web</div>
+
+    <h1>Brzy se vrátíme<br>v nové podobě</h1>
+
+    <p class="lead">
+      Pracujeme na novém webu. Mezitím nás neváhejte kontaktovat — rádi probereme váš projekt.
+    </p>
+
+    <div class="contact">
+      <a href="tel:+420724250607">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.77a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        724 250 607
+      </a>
+      <a href="mailto:info@vgmedia.cz">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@vgmedia.cz
+      </a>
+    </div>
+
+    <footer>
+      &copy; 2026 VG Media. Všechna práva vyhrazena.
+    </footer>
+  </div>
+</body>
+</html>
