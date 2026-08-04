@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podmínky použití — VG Media</title>
+  <meta name="description" content="Podmínky použití aplikace VG MEDIA API NEW.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #ffffff;
+      --accent: #CC0000;
+      --ink: #111111;
+      --gray: #555555;
+      --gray2: #888888;
+      --border: rgba(0,0,0,0.1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .logo img {
+      display: block;
+      height: 48px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: rgba(204,0,0,0.08);
+      border: 1px solid rgba(204,0,0,0.25);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--gray2);
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 24px;
+    }
+    ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+
+    .contact-block {
+      margin-top: 40px;
+      padding: 24px;
+      background: rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .contact-block p {
+      margin-bottom: 4px;
+    }
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--gray2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    footer a {
+      color: var(--gray2);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">
+      <a href="/"><img src="logo.png" alt="VG Media"></a>
+    </div>
+
+    <div class="badge">Právní dokumenty</div>
+
+    <h1>Podmínky použití</h1>
+    <p class="meta">Poslední aktualizace: 4. 8. 2026</p>
+
+    <p>
+      Tyto podmínky se vztahují na aplikaci <strong>VG MEDIA API NEW</strong> (App ID 1673360010603671),
+      interní nástroj agentury VG Media (Martin Gottvald) pro správu reklamních kampaní
+      klientů na platformě Meta (Facebook, Instagram) prostřednictvím Meta Marketing API.
+    </p>
+
+    <h2>Kdo appku používá</h2>
+    <p>
+      Appku provozuje a používá výhradně agentura VG Media a její pověření pracovníci pro
+      správu reklamních účtů klientů, ke kterým jim klient udělil přístup (jako partner
+      business / přes system usera v Business Manageru).
+    </p>
+
+    <h2>Co appka dělá</h2>
+    <ul>
+      <li>Čte a analyzuje data z reklamních účtů klientů (kampaně, sady reklam, reklamy, výkonnostní metriky, produktové katalogy).</li>
+      <li>Na základě schválení klienta vytváří a upravuje kampaně, sady reklam a reklamy přes Meta Marketing API.</li>
+      <li>Žádná změna v účtu klienta neproběhne bez předchozího lidského schválení.</li>
+    </ul>
+
+    <h2>Omezení odpovědnosti</h2>
+    <p>
+      Appka je interní nástroj, není určena k veřejnému použití třetími stranami mimo
+      agenturu VG Media a její klienty. VG Media neručí za výpadky nebo změny na straně
+      Meta Platform.
+    </p>
+
+    <h2>Ukončení přístupu</h2>
+    <p>
+      Klient může kdykoliv odebrat appce/system userovi přístup ke svému reklamnímu účtu
+      v Business Settings → Partneři / Systémoví uživatelé. Tím se okamžitě ukončí veškerý
+      přístup appky k datům daného účtu.
+    </p>
+
+    <h2>Kontakt</h2>
+    <div class="contact-block">
+      <p><strong>VG Media — Martin Gottvald</strong></p>
+      <p>Web: <a href="https://www.vgmedia.cz">www.vgmedia.cz</a></p>
+      <p>E-mail: <a href="mailto:info@vgmedia.cz">info@vgmedia.cz</a></p>
+    </div>
+
+    <footer>
+      <span>&copy; 2026 VG Media. Všechna práva vyhrazena.</span>
+      <a href="/">← Zpět na web</a>
+    </footer>
+  </div>
+</body>
+</html>

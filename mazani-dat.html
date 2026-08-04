@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokyny k mazání dat — VG Media</title>
+  <meta name="description" content="Pokyny k mazání dat aplikace VG MEDIA API NEW.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #ffffff;
+      --accent: #CC0000;
+      --ink: #111111;
+      --gray: #555555;
+      --gray2: #888888;
+      --border: rgba(0,0,0,0.1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .logo img {
+      display: block;
+      height: 48px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: rgba(204,0,0,0.08);
+      border: 1px solid rgba(204,0,0,0.25);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--gray2);
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 24px;
+    }
+    ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+
+    .contact-block {
+      margin-top: 40px;
+      padding: 24px;
+      background: rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .contact-block p {
+      margin-bottom: 4px;
+    }
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--gray2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    footer a {
+      color: var(--gray2);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">
+      <a href="/"><img src="logo.png" alt="VG Media"></a>
+    </div>
+
+    <div class="badge">Právní dokumenty</div>
+
+    <h1>Pokyny k mazání dat</h1>
+    <p class="meta">Poslední aktualizace: 4. 8. 2026</p>
+
+    <p>
+      Aplikace <strong>VG MEDIA API NEW</strong> zpracovává data z reklamních účtů výhradně na základě
+      přístupu uděleného klientem přes Meta Business Manager. Nejde o data koncových
+      spotřebitelů shromažďovaná appkou přímo.
+    </p>
+
+    <h2>Jak zastavit zpracování dat</h2>
+    <p>
+      Nejrychlejší a nejúčinnější způsob: klient (vlastník reklamního účtu) odebere appce
+      nebo system userovi VG Media přístup v Business Settings → Partneři nebo
+      Systémoví uživatelé → přiřazené prostředky. Tím appka okamžitě ztratí přístup
+      ke všem datům daného účtu přes Meta API.
+    </p>
+
+    <h2>Žádost o výmaz uložených dat</h2>
+    <p>
+      Pokud si přejete, abychom vymazali data, která jsme si o vašem účtu lokálně uložili
+      (např. reportingové podklady), napište na <a href="mailto:info@vgmedia.cz" style="color:var(--accent);text-decoration:none;">info@vgmedia.cz</a> s předmětem
+      „Žádost o výmaz dat" a uveďte název firmy / ID reklamního účtu. Žádosti vyřizujeme
+      do 30 dnů.
+    </p>
+
+    <h2>Kontakt</h2>
+    <div class="contact-block">
+      <p><strong>VG Media — Martin Gottvald</strong></p>
+      <p>E-mail: <a href="mailto:info@vgmedia.cz">info@vgmedia.cz</a></p>
+    </div>
+
+    <footer>
+      <span>&copy; 2026 VG Media. Všechna práva vyhrazena.</span>
+      <a href="/">← Zpět na web</a>
+    </footer>
+  </div>
+</body>
+</html>
