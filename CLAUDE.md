@@ -127,7 +127,7 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 
 - [x] Logo, favicon a přesná brand barva (#A81B1E) — dodáno a zavedeno v kódu
 - [x] Next.js projekt založen, MVP stránky (Home, Služby, Reference, Kontakt) naskriptované a lokální build prochází
-- [ ] Repo propojit s Vercelem a udělat první deploy (viz návod v chatu)
+- [x] Repo propojeno s Vercelem, produkční doména vgmedia.cz ukazuje na nový build (deploy z commitu 1488d0d proběhl bez chyb)
 - [ ] Reálná čísla pro Home — celkově spravovaný rozpočet (all-time) + aktuální roční objem/počet klientů (viz sekce 5, jaká čísla a proč)
 - [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá
 - [ ] Fotky týmu — Martin dodá
