@@ -38,6 +38,7 @@ Performance a AI-driven reklama. Konkrétní služby, které web musí komunikov
 - Sebevědomí ano, arogance ne
 - Konkrétní čísla a výsledky místo prázdných frází ("výkonnostní marketing", "růst" apod. jen když jsou podložené daty)
 - Klidně vstřícný a lidský tón, ale bez přehnané familiárnosti nebo vtípků
+- **Nikde v textech na webu nepoužívat dlouhou pomlčku (—)** — vypadá jako typický "AI" rukopis. Používat čárku, tečku, nebo běžnou spojovací pomlčku (-). Existující výskyty (statistiky, popisky služeb, kontakt, reference) je potřeba postupně přepsat — zatím to Martin odložil na později, ale nové texty už pomlčku nesmí obsahovat.
 
 **Neděláme to jako:**
 - Fanl.cz a HonzaBartos.cz jdou do drzého, "no bullshit" tónu ("Ne branding. Ne bullshit.") — pro VG Media je to moc agresivní, náš tón má být slušnější
