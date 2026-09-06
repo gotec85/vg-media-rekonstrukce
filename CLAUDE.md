@@ -129,9 +129,10 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 - [x] Logo, favicon a přesná brand barva (#A81B1E) — dodáno a zavedeno v kódu
 - [x] Next.js projekt založen, MVP stránky (Home, Služby, Reference, Kontakt) naskriptované a lokální build prochází
 - [x] Repo propojeno s Vercelem, produkční doména vgmedia.cz ukazuje na nový build (deploy z commitu 1488d0d proběhl bez chyb)
-- [x] Rozpočet za posledních 12 měsíců — 13 831 089 Kč (na Home nahradilo dlaždici s počtem klientů)
-- [x] Let zkušeností — 7
-- [ ] Celkově spravovaný rozpočet (all-time, hero číslo) — zatím placeholder "—" na Home, Martin dodá
+- [x] Rozpočet za posledních 12 měsíců — 13 831 089 Kč (číslo známe, viz níže)
+- [x] Let zkušeností — 7 (číslo známe, viz níže)
+- [ ] Celkově spravovaný rozpočet (all-time) — Martin dodá
+- [ ] Sekce se statistikami je na Home dočasně vyhozená — na jejím místě bude běžící pás log klientů (Martin dodá loga). Až budou loga hotová, statistiky (rozpočet 12 měsíců 13 831 089 Kč, 7 let zkušeností, all-time rozpočet) je potřeba vrátit zpět — buď nad/pod logy, nebo jinam na stránku.
 - [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá
 - [ ] Fotky týmu — Martin dodá
 - [ ] Ukázky AI video kreativ ke vložení na web — Martin dodá

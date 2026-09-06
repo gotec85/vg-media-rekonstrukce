@@ -28,12 +28,6 @@ const services = [
   },
 ];
 
-const stats = [
-  { value: "—", label: "Celkově spravovaný rozpočet (doplníme)" },
-  { value: "13 831 089 Kč", label: "Spravovaný rozpočet za posledních 12 měsíců" },
-  { value: "7", label: "Let zkušeností" },
-];
-
 const heroBadges = [
   {
     label: "Meta Ads",
@@ -114,17 +108,6 @@ export default function Home() {
               </span>
               <span>{badge.label}</span>
             </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-black/5 bg-zinc-50">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-14 sm:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <p className="text-4xl font-bold text-brand">{stat.value}</p>
-              <p className="mt-2 text-sm text-zinc-600">{stat.label}</p>
-            </div>
           ))}
         </div>
       </section>
