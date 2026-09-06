@@ -34,6 +34,34 @@ const stats = [
   { value: "—", label: "Let zkušeností" },
 ];
 
+const heroBadges = [
+  {
+    label: "Meta Ads",
+    href: "/sluzby#meta-ads",
+    position: "left-3 top-4 sm:-left-8 sm:top-6",
+  },
+  {
+    label: "AI grafika",
+    href: "/sluzby#bannery",
+    position: "right-3 top-4 sm:-right-6 sm:top-10",
+  },
+  {
+    label: "Google Ads",
+    href: "/sluzby#google-ads",
+    position: "right-3 top-1/2 sm:-right-8 sm:top-[58%]",
+  },
+  {
+    label: "AI video",
+    href: "/sluzby#ai-video",
+    position: "bottom-16 left-3 sm:-left-6",
+  },
+  {
+    label: "Reklama v AI chatech",
+    href: "/sluzby#reklama-v-ai-chatech",
+    position: "bottom-3 right-3 sm:-bottom-5 sm:right-10",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -79,30 +107,16 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute left-3 top-4 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-left-8 sm:top-6 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
-            <span>Meta Ads</span>
-          </div>
-
-          <div className="absolute right-3 top-4 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-right-6 sm:top-10 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
-            <span>AI grafika</span>
-          </div>
-
-          <div className="absolute right-3 top-1/2 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-right-8 sm:top-[58%] sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
-            <span>Google Ads</span>
-          </div>
-
-          <div className="absolute bottom-16 left-3 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-left-6 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
-            <span>AI video</span>
-          </div>
-
-          <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-bottom-5 sm:right-10 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
-            <span>Reklama v AI chatech</span>
-          </div>
+          {heroBadges.map((badge) => (
+            <Link
+              key={badge.label}
+              href={badge.href}
+              className={`group absolute flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg transition-colors hover:bg-brand hover:text-white sm:gap-2 sm:px-4 sm:py-3 sm:text-sm ${badge.position}`}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-brand transition-colors group-hover:bg-white sm:h-2 sm:w-2" />
+              <span>{badge.label}</span>
+            </Link>
+          ))}
         </div>
       </section>
 

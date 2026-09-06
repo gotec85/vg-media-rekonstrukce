@@ -7,27 +7,32 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    id: "meta-ads",
     title: "Meta Ads",
     description:
       "Nastavení a správa reklam na Facebooku a Instagramu — od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat.",
   },
   {
+    id: "google-ads",
     title: "Google Ads",
     description:
       "Výkonnostní kampaně ve vyhledávání, obsahové síti a nákupních kampaních Google, propojené s Meta Ads do jedné strategie.",
   },
   {
+    id: "reklama-v-ai-chatech",
     title: "Reklama v AI chatech",
     description:
       "Nová disciplína — reklama v prostředí AI chatbotů a AI vyhledávání. Jsme mezi prvními agenturami v Česku, které tohle klientům nabízí.",
     highlight: true,
   },
   {
+    id: "ai-video",
     title: "AI video",
     description:
       "Reklamní video kreativy vytvořené pomocí AI nástrojů — rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
   },
   {
+    id: "bannery",
     title: "Bannery",
     description:
       "Display a bannerová reklamní grafika napříč reklamními sítěmi, navazující na vizuální styl klienta.",
@@ -50,7 +55,8 @@ export default function SluzbyPage() {
         {services.map((service) => (
           <div
             key={service.title}
-            className={`rounded-2xl border p-8 ${
+            id={service.id}
+            className={`scroll-mt-24 rounded-2xl border p-8 ${
               service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
             }`}
           >
