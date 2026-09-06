@@ -37,8 +37,8 @@ const stats = [
 export default function Home() {
   return (
     <div>
-      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2">
-        <div>
+      <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-5">
+        <div className="lg:col-span-2">
           <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
             Reklama, která vydělává.
           </h1>
@@ -62,36 +62,41 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative lg:col-span-3">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-zinc-100 shadow-xl">
             <Image
               src="/hero-team.jpg"
               alt="Tým VG Media při práci na kampani"
               fill
               priority
-              sizes="(min-width: 1024px) 40vw, 90vw"
+              sizes="(min-width: 1024px) 55vw, 90vw"
               className="object-cover"
             />
           </div>
 
-          <div className="absolute -left-4 top-6 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-left-8">
-            <span className="h-2 w-2 rounded-full bg-brand" />
-            <span className="text-sm font-semibold text-zinc-800">Meta Ads</span>
+          <div className="absolute left-3 top-4 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-left-8 sm:top-6 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
+            <span>Meta Ads</span>
           </div>
 
-          <div className="absolute -right-3 top-1/3 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-right-6">
-            <span className="h-2 w-2 rounded-full bg-brand" />
-            <span className="text-sm font-semibold text-zinc-800">Google Ads</span>
+          <div className="absolute right-3 top-4 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-right-6 sm:top-10 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
+            <span>AI grafika</span>
           </div>
 
-          <div className="absolute -left-3 bottom-16 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-left-6">
-            <span className="h-2 w-2 rounded-full bg-brand" />
-            <span className="text-sm font-semibold text-zinc-800">AI video</span>
+          <div className="absolute right-3 top-1/2 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-right-8 sm:top-[58%] sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
+            <span>Google Ads</span>
           </div>
 
-          <div className="absolute -bottom-5 right-4 flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-3 shadow-lg sm:right-10">
-            <span className="h-2 w-2 rounded-full bg-white" />
-            <span className="text-sm font-semibold text-white">Reklama v AI chatech</span>
+          <div className="absolute bottom-16 left-3 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-left-6 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
+            <span>AI video</span>
+          </div>
+
+          <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg sm:-bottom-5 sm:right-10 sm:gap-2 sm:px-4 sm:py-3 sm:text-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand sm:h-2 sm:w-2" />
+            <span>Reklama v AI chatech</span>
           </div>
         </div>
       </section>
