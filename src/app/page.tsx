@@ -84,13 +84,13 @@ export default function Home() {
               href="/kontakt"
               className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
             >
-              Domluvit nezávazný audit
+              Chci spravovat reklamy
             </Link>
             <Link
-              href="/sluzby"
+              href="#co-delame"
               className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-brand hover:text-brand"
             >
-              Co nabízíme
+              Naše služby
             </Link>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
         <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Co pro klienty děláme</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
