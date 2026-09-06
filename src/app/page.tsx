@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
@@ -36,30 +37,62 @@ const stats = [
 export default function Home() {
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <p className="text-sm font-semibold uppercase tracking-wide text-brand">
-          Performance &amp; AI reklama
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
-          Reklama, která funguje.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-          Spravujeme Meta Ads a Google Ads, tvoříme AI video a bannery — nově přidáváme i reklamu v
-          AI chatech.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="/kontakt"
-            className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
-            Domluvit nezávazný audit
-          </Link>
-          <Link
-            href="/sluzby"
-            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-brand hover:text-brand"
-          >
-            Co všechno děláme
-          </Link>
+      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2">
+        <div>
+          <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
+            Reklama, která funguje.
+          </h1>
+          <p className="mt-6 max-w-lg text-lg leading-8 text-zinc-600">
+            Spravujeme Meta Ads a Google Ads, tvoříme AI video a bannery — nově přidáváme i reklamu v
+            AI chatech.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/kontakt"
+              className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+            >
+              Domluvit nezávazný audit
+            </Link>
+            <Link
+              href="/sluzby"
+              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-brand hover:text-brand"
+            >
+              Co nabízíme
+            </Link>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-zinc-100 shadow-xl">
+            <Image
+              src="/hero-team.jpg"
+              alt="Tým VG Media při práci na kampani"
+              fill
+              priority
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="absolute -left-4 top-6 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-left-8">
+            <span className="h-2 w-2 rounded-full bg-brand" />
+            <span className="text-sm font-semibold text-zinc-800">Meta Ads</span>
+          </div>
+
+          <div className="absolute -right-3 top-1/3 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-right-6">
+            <span className="h-2 w-2 rounded-full bg-brand" />
+            <span className="text-sm font-semibold text-zinc-800">Google Ads</span>
+          </div>
+
+          <div className="absolute -left-3 bottom-16 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-lg sm:-left-6">
+            <span className="h-2 w-2 rounded-full bg-brand" />
+            <span className="text-sm font-semibold text-zinc-800">AI video</span>
+          </div>
+
+          <div className="absolute -bottom-5 right-4 flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-3 shadow-lg sm:right-10">
+            <span className="h-2 w-2 rounded-full bg-white" />
+            <span className="text-sm font-semibold text-white">Reklama v AI chatech</span>
+          </div>
         </div>
       </section>
 
