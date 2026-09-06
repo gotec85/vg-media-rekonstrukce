@@ -68,11 +68,11 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
-            Reklama, která vydělává.
+            Reklama, která skutečně vydělává.
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-zinc-600">
-            Neřešíme kliky — přivádíme vám nové zákazníky. Kampaně na Metě, Google Ads i v AI
-            chatech míříme tak, aby vydělávaly — ne aby vypadaly dobře v reportu.
+            Neřešíme kliky, přivádíme vám nové zákazníky. Kampaně na Metě, Google Ads i v AI
+            chatech nastavujeme tak, aby vydělávaly, ne aby vypadaly dobře v reportu.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -106,9 +106,12 @@ export default function Home() {
             <Link
               key={badge.label}
               href={badge.href}
-              className={`group absolute flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-lg transition-colors hover:bg-brand hover:text-white sm:gap-2 sm:px-4 sm:py-3 sm:text-sm ${badge.position}`}
+              className={`group absolute flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 shadow-lg transition-colors hover:bg-brand hover:text-white sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-base ${badge.position}`}
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-brand transition-colors group-hover:bg-white sm:h-2 sm:w-2" />
+              <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75 group-hover:bg-white" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand transition-colors group-hover:bg-white sm:h-2.5 sm:w-2.5" />
+              </span>
               <span>{badge.label}</span>
             </Link>
           ))}
