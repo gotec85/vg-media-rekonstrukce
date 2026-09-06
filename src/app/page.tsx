@@ -40,7 +40,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2">
         <div>
           <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
-            Reklama, která funguje.
+            Reklama, která vydělává.
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-zinc-600">
             Spravujeme Meta Ads a Google Ads, tvoříme AI video a bannery — nově přidáváme i reklamu v
