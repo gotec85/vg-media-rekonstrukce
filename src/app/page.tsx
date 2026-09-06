@@ -30,8 +30,8 @@ const services = [
 
 const stats = [
   { value: "—", label: "Celkově spravovaný rozpočet (doplníme)" },
-  { value: "—", label: "Aktivních klientů" },
-  { value: "—", label: "Let zkušeností" },
+  { value: "13 831 089 Kč", label: "Spravovaný rozpočet za posledních 12 měsíců" },
+  { value: "7", label: "Let zkušeností" },
 ];
 
 const heroBadges = [
