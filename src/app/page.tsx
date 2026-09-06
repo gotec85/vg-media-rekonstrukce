@@ -70,15 +70,10 @@ export default function Home() {
           <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
             Reklama, která vydělává.
           </h1>
-          <div className="mt-6 max-w-lg space-y-2">
-            <p className="text-xl font-bold text-zinc-900 sm:text-2xl">
-              Neřešíme kliky, přivádíme vám nové zákazníky.
-            </p>
-            <p className="text-lg text-zinc-600">
-              Kampaně na Metě, Google Ads i v AI chatech míříme tak, aby vydělávaly — ne aby
-              vypadaly dobře v reportu.
-            </p>
-          </div>
+          <p className="mt-6 max-w-lg text-lg leading-8 text-zinc-600">
+            Neřešíme kliky — přivádíme vám nové zákazníky. Kampaně na Metě, Google Ads i v AI
+            chatech míříme tak, aby vydělávaly — ne aby vypadaly dobře v reportu.
+          </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/kontakt"
