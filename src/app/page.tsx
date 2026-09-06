@@ -62,7 +62,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
-            Reklama, která skutečně vydělává.
+            Reklama, která skutečně <span className="text-brand">vydělává</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-zinc-600">
             Neřešíme kliky, přivádíme vám nové zákazníky. Kampaně na Metě, Google Ads i v AI
