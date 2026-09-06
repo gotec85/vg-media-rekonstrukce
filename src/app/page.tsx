@@ -71,7 +71,7 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/kontakt"
-              className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+              className="rounded-full border-2 border-brand bg-brand px-6 py-[10px] text-sm font-semibold text-white transition-colors hover:bg-white hover:text-brand"
             >
               Chci spravovat reklamy
             </Link>
