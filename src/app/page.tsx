@@ -41,11 +41,11 @@ export default function Home() {
           Performance &amp; AI reklama
         </p>
         <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-5xl">
-          Reklama, která funguje — a umí i to, co ostatní ještě ne.
+          Reklama, která funguje.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-          VG Media spravuje Meta Ads a Google Ads kampaně, tvoří AI video kreativy a bannery — a jako
-          jedni z prvních v Česku nabízíme i reklamu v AI chatech.
+          Spravujeme Meta Ads a Google Ads, tvoříme AI video a bannery — nově přidáváme i reklamu v
+          AI chatech.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
