@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open *)",
+      "Bash(sips -g hasAlpha -g pixelWidth -g pixelHeight logo.png)",
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(pip3 show *)",
+      "Bash(magick logo.png -format \"%[pixel:p{5,5}] %[pixel:p{460,5}] %[pixel:p{920,5}] %[pixel:p{5,575}] %[pixel:p{5,1145}]\" info:)",
+      "Bash(cp logo.png /private/tmp/claude-501/-Users-martingottvald-Documents-Vibecoding-vg-media-rekonstrukce/ee1b360e-5d3d-47c4-a974-d3369edd84fe/scratchpad/logo_orig.png)",
+      "Bash(magick logo_orig.png -fuzz 22% -fill none -draw \"color 0,0 floodfill\" -draw \"color 927,0 floodfill\" -draw \"color 0,1151 floodfill\" -draw \"color 927,1151 floodfill\" -draw \"color 463,0 floodfill\" -draw \"color 463,1151 floodfill\" -draw \"color 0,575 floodfill\" -draw \"color 927,575 floodfill\" logo_test.png)",
+      "Bash(magick logo_test.png -background \"#222244\" -alpha remove -alpha off check_dark.png)",
+      "Bash(magick logo_test.png -trim +repage logo_trimmed.png)",
+      "Bash(identify logo_trimmed.png)",
+      "Bash(identify /Users/martingottvald/Documents/Vibecoding/vg-media-rekonstrukce/logo.png)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}
