@@ -22,27 +22,27 @@ const heroBadges = [
   {
     label: "Meta Ads",
     href: "/sluzby/meta-ads",
-    position: "left-3 top-4 sm:-left-8 sm:top-6",
+    position: "left-1 top-4 sm:-left-8 sm:top-6",
   },
   {
     label: "AI grafika",
     href: "/sluzby/bannery",
-    position: "right-3 top-4 sm:-right-6 sm:top-10",
+    position: "right-1 top-4 sm:-right-6 sm:top-10",
   },
   {
     label: "Google Ads",
     href: "/sluzby/google-ads",
-    position: "right-3 top-1/2 sm:-right-8 sm:top-[58%]",
+    position: "right-1 top-1/2 sm:-right-8 sm:top-[58%]",
   },
   {
     label: "AI video",
     href: "/sluzby/ai-video",
-    position: "bottom-16 left-3 sm:-left-6",
+    position: "bottom-16 left-1 sm:-left-6",
   },
   {
     label: "Reklama v AI chatech",
     href: "/sluzby/reklama-v-ai-chatech",
-    position: "bottom-3 right-3 sm:-bottom-5 sm:right-10",
+    position: "bottom-1 right-1 sm:-bottom-5 sm:right-10",
   },
 ];
 
