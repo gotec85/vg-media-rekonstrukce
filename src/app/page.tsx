@@ -139,7 +139,7 @@ export default function Home() {
           Klienti, kterým pomáháme růst
         </p>
         {[clientLogosRow1, clientLogosRow2].map((row, rowIndex) => (
-          <div key={rowIndex} className={`relative overflow-hidden ${rowIndex === 0 ? "mt-6" : "mt-4"}`}>
+          <div key={rowIndex} className={`marquee-fade relative overflow-hidden ${rowIndex === 0 ? "mt-6" : "mt-4"}`}>
             <div
               className={`flex w-max items-center gap-20 sm:gap-24 ${
                 rowIndex === 0 ? "animate-marquee" : "animate-marquee-reverse"
