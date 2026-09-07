@@ -12,19 +12,20 @@ const services = [
     description: "Výkonnostní kampaně ve vyhledávání a obsahové síti Google.",
   },
   {
-    title: "Reklama v AI chatech",
-    description:
-      "Nová disciplína, se kterou jsme mezi prvními na trhu — reklama tam, kde lidé hledají odpovědi přes AI.",
-    highlight: true,
-  },
-  {
     title: "AI video",
     description:
-      "Reklamní videokreativy vytvořené pomocí AI nástrojů — rychleji a levněji než klasická produkce.",
+      "Reklamní videokreativy vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
   },
   {
-    title: "Bannery",
+    title: "AI fotky a bannery",
     description: "Display a bannerová reklamní grafika napříč sítěmi.",
+  },
+  {
+    title: "Reklama v AI chatech",
+    description:
+      "Nová disciplína, se kterou jsme mezi prvními na trhu, reklama tam, kde lidé hledají odpovědi přes AI.",
+    highlight: true,
+    isNew: true,
   },
 ];
 
@@ -118,19 +119,21 @@ export default function Home() {
           {services.map((service) => (
             <div
               key={service.title}
-              className={`rounded-2xl border p-6 ${
+              className={`rounded-2xl border p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
                 service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
               }`}
             >
-              <h3 className="text-lg font-semibold text-zinc-900">{service.title}</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-zinc-900">{service.title}</h3>
+                {service.isNew && (
+                  <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
+                    Novinka
+                  </span>
+                )}
+              </div>
               <p className="mt-2 text-sm leading-6 text-zinc-600">{service.description}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-8">
-          <Link href="/sluzby" className="text-sm font-semibold text-brand hover:underline">
-            Detailně o všech službách →
-          </Link>
         </div>
       </section>
 

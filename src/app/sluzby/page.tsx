@@ -19,23 +19,24 @@ const services = [
       "Výkonnostní kampaně ve vyhledávání, obsahové síti a nákupních kampaních Google, propojené s Meta Ads do jedné strategie.",
   },
   {
-    id: "reklama-v-ai-chatech",
-    title: "Reklama v AI chatech",
-    description:
-      "Nová disciplína — reklama v prostředí AI chatbotů a AI vyhledávání. Jsme mezi prvními agenturami v Česku, které tohle klientům nabízí.",
-    highlight: true,
-  },
-  {
     id: "ai-video",
     title: "AI video",
     description:
-      "Reklamní video kreativy vytvořené pomocí AI nástrojů — rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
+      "Reklamní video kreativy vytvořené pomocí AI nástrojů, rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
   },
   {
     id: "bannery",
-    title: "Bannery",
+    title: "AI fotky a bannery",
     description:
       "Display a bannerová reklamní grafika napříč reklamními sítěmi, navazující na vizuální styl klienta.",
+  },
+  {
+    id: "reklama-v-ai-chatech",
+    title: "Reklama v AI chatech",
+    description:
+      "Nová disciplína, reklama v prostředí AI chatbotů a AI vyhledávání. Jsme mezi prvními agenturami v Česku, které tohle klientům nabízí.",
+    highlight: true,
+    isNew: true,
   },
 ];
 
@@ -56,11 +57,18 @@ export default function SluzbyPage() {
           <div
             key={service.title}
             id={service.id}
-            className={`scroll-mt-24 rounded-2xl border p-8 ${
+            className={`scroll-mt-24 rounded-2xl border p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
               service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
             }`}
           >
-            <h2 className="text-xl font-semibold text-zinc-900">{service.title}</h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl font-semibold text-zinc-900">{service.title}</h2>
+              {service.isNew && (
+                <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
+                  Novinka
+                </span>
+              )}
+            </div>
             <p className="mt-3 max-w-3xl leading-7 text-zinc-600">{service.description}</p>
           </div>
         ))}
