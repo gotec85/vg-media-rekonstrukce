@@ -165,7 +165,7 @@ export default function Home() {
           href="/kontakt"
           className="mt-6 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
         >
-          Kontaktovat VG Media
+          Kontaktujte nás
         </Link>
       </section>
     </div>
