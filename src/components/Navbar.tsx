@@ -9,14 +9,11 @@ const services = [
   { href: "/sluzby/reklama-v-ai-chatech", label: "Reklama v AI chatech" },
 ];
 
-const links = [
-  { href: "/reference", label: "Case studies" },
-  { href: "/kontakt", label: "Kontakt" },
-];
+const links = [{ href: "/reference", label: "Case studies" }];
 
 export default function Navbar() {
   return (
-    <header className="border-b border-black/5">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="VG Media" width={140} height={34} priority />
