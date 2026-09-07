@@ -134,7 +134,7 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 - [x] Rozpočet za posledních 12 měsíců — 13 831 089 Kč (číslo známe, viz níže)
 - [x] Let zkušeností — 7 (číslo známe, viz níže)
 - [ ] Celkově spravovaný rozpočet (all-time) — Martin dodá
-- [x] Na místo staré statistikové sekce je teď na Home běžící pás (marquee) pod hero sekcí — zatím jen s placeholder dlaždicemi "Klient 1".."Klient 6" (přerušovaný rámeček, aby bylo jasné, že to nejsou reálná loga). Až Martin pošle skutečná loga klientů (SVG/PNG na průhledném pozadí, ideálně jednotné výšky), nahradit `clientLogos` pole v `src/app/page.tsx` obrázky.
+- [x] Běžící pás (marquee) log klientů na Home je hotový se skutečnými logy (Notificard, Bezrealitky, Fakturoid, OčníOptik, MM., #kryjemevamzada, Lovato Electric, LEGISTES advokátní kancelář, Elementary POS, Bezmakléři). Martin poslal ořezané screenshoty na bílém/barevném pozadí — pozadí bylo automaticky odstraněno (flood-fill + oříznutí), soubory jsou v `public/clients/*.png`. Pokud Martin pošle časem kvalitnější/vektorové verze log, stačí soubory nahradit stejnými názvy.
 - [ ] Statistiky (rozpočet 12 měsíců 13 831 089 Kč, 7 let zkušeností, all-time rozpočet) zatím nemají místo na stránce — vrátit je zpět, až budou loga hotová (např. pod pás log, nebo jinam na Home).
 - [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá
 - [ ] Fotky týmu — Martin dodá

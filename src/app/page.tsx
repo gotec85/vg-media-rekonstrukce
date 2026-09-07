@@ -35,12 +35,16 @@ const services = [
 ];
 
 const clientLogos = [
-  "Klient 1",
-  "Klient 2",
-  "Klient 3",
-  "Klient 4",
-  "Klient 5",
-  "Klient 6",
+  { name: "Notificard", src: "/clients/notificard.png", width: 296, height: 176 },
+  { name: "Bezrealitky", src: "/clients/bezrealitky.png", width: 177, height: 42 },
+  { name: "Fakturoid", src: "/clients/fakturoid.png", width: 177, height: 49 },
+  { name: "OcniOptik", src: "/clients/ocni-optik.png", width: 167, height: 51 },
+  { name: "MM.", src: "/clients/mm.png", width: 68, height: 30 },
+  { name: "Kryjeme vam zada", src: "/clients/kryjeme-vam-zada.png", width: 240, height: 35 },
+  { name: "Lovato Electric", src: "/clients/lovato-electric.png", width: 222, height: 90 },
+  { name: "Legistes", src: "/clients/legistes.png", width: 216, height: 56 },
+  { name: "Elementary POS", src: "/clients/elementary-pos.png", width: 308, height: 44 },
+  { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
 ];
 
 const heroBadges = [
@@ -129,16 +133,19 @@ export default function Home() {
 
       <section className="border-y border-black/5 bg-zinc-50 py-10">
         <p className="text-center text-xs font-semibold uppercase tracking-wide text-zinc-400">
-          Klienti, kterým pomáháme růst (loga doplníme)
+          Klienti, kterým pomáháme růst
         </p>
         <div className="relative mt-6 overflow-hidden">
-          <div className="flex w-max animate-marquee gap-10">
-            {[...clientLogos, ...clientLogos].map((name, i) => (
-              <div
-                key={`${name}-${i}`}
-                className="flex h-14 w-36 flex-shrink-0 items-center justify-center rounded-lg border border-dashed border-zinc-300 bg-white text-xs font-medium text-zinc-400"
-              >
-                {name}
+          <div className="flex w-max animate-marquee items-center gap-14">
+            {[...clientLogos, ...clientLogos].map((client, i) => (
+              <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
+                <Image
+                  src={client.src}
+                  alt={client.name}
+                  width={client.width}
+                  height={client.height}
+                  className="h-full w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                />
               </div>
             ))}
           </div>
