@@ -34,6 +34,15 @@ const services = [
   },
 ];
 
+const clientLogos = [
+  "Klient 1",
+  "Klient 2",
+  "Klient 3",
+  "Klient 4",
+  "Klient 5",
+  "Klient 6",
+];
+
 const heroBadges = [
   {
     label: "Meta Ads",
@@ -115,6 +124,24 @@ export default function Home() {
               <span>{badge.label}</span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="border-y border-black/5 bg-zinc-50 py-10">
+        <p className="text-center text-xs font-semibold uppercase tracking-wide text-zinc-400">
+          Klienti, kterým pomáháme růst (loga doplníme)
+        </p>
+        <div className="relative mt-6 overflow-hidden">
+          <div className="flex w-max animate-marquee gap-10">
+            {[...clientLogos, ...clientLogos].map((name, i) => (
+              <div
+                key={`${name}-${i}`}
+                className="flex h-14 w-36 flex-shrink-0 items-center justify-center rounded-lg border border-dashed border-zinc-300 bg-white text-xs font-medium text-zinc-400"
+              >
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

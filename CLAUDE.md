@@ -134,7 +134,8 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 - [x] Rozpočet za posledních 12 měsíců — 13 831 089 Kč (číslo známe, viz níže)
 - [x] Let zkušeností — 7 (číslo známe, viz níže)
 - [ ] Celkově spravovaný rozpočet (all-time) — Martin dodá
-- [ ] Sekce se statistikami je na Home dočasně vyhozená — na jejím místě bude běžící pás log klientů (Martin dodá loga). Až budou loga hotová, statistiky (rozpočet 12 měsíců 13 831 089 Kč, 7 let zkušeností, all-time rozpočet) je potřeba vrátit zpět — buď nad/pod logy, nebo jinam na stránku.
+- [x] Na místo staré statistikové sekce je teď na Home běžící pás (marquee) pod hero sekcí — zatím jen s placeholder dlaždicemi "Klient 1".."Klient 6" (přerušovaný rámeček, aby bylo jasné, že to nejsou reálná loga). Až Martin pošle skutečná loga klientů (SVG/PNG na průhledném pozadí, ideálně jednotné výšky), nahradit `clientLogos` pole v `src/app/page.tsx` obrázky.
+- [ ] Statistiky (rozpočet 12 měsíců 13 831 089 Kč, 7 let zkušeností, all-time rozpočet) zatím nemají místo na stránce — vrátit je zpět, až budou loga hotová (např. pod pás log, nebo jinam na Home).
 - [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá
 - [ ] Fotky týmu — Martin dodá
 - [ ] Ukázky AI video kreativ ke vložení na web — Martin dodá
