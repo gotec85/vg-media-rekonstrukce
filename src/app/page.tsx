@@ -186,22 +186,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-black/5 bg-zinc-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center">
-          <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Reference a case studies</h2>
-          <p className="mx-auto mt-4 max-w-xl text-zinc-600">
-            Případové studie s konkrétními výsledky připravujeme — brzy je najdete na samostatné
-            stránce.
-          </p>
-          <Link
-            href="/reference"
-            className="mt-6 inline-block rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-brand hover:text-brand"
-          >
-            Zobrazit reference
-          </Link>
-        </div>
-      </section>
-
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Probereme váš projekt?</h2>
         <p className="mx-auto mt-4 max-w-xl text-zinc-600">

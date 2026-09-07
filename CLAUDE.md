@@ -136,7 +136,7 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 - [ ] Celkově spravovaný rozpočet (all-time) — Martin dodá
 - [x] Běžící pás (marquee) log klientů na Home je hotový se skutečnými logy (Notificard, Bezrealitky, Fakturoid, OčníOptik, MM., #kryjemevamzada, Lovato Electric, LEGISTES advokátní kancelář, Elementary POS, Bezmakléři). Martin poslal ořezané screenshoty na bílém/barevném pozadí — pozadí bylo automaticky odstraněno (flood-fill + oříznutí), soubory jsou v `public/clients/*.png`. Pokud Martin pošle časem kvalitnější/vektorové verze log, stačí soubory nahradit stejnými názvy.
 - [ ] Statistiky (rozpočet 12 měsíců 13 831 089 Kč, 7 let zkušeností, all-time rozpočet) zatím nemají místo na stránce — vrátit je zpět, až budou loga hotová (např. pod pás log, nebo jinam na Home).
-- [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá
+- [ ] Obsah case studies (klient, zadání, řešení, výsledek) — Martin dodá. Zatím je placeholder sekce "Reference a case studies" na Home dočasně vyhozená (byla to jen prázdná teaser sekce bez obsahu) — vrátit ji, až budou reálné reference k zobrazení. Samostatná stránka /reference (s placeholder kartami) zůstává beze změny.
 - [ ] Fotky týmu — Martin dodá
 - [ ] Ukázky AI video kreativ ke vložení na web — Martin dodá
 - [ ] Potvrdit orientační minimální rozpočet klienta pro sekci "s kým spolupracujeme" (pokud se do toho půjde, viz sekce 5)
