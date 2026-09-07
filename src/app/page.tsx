@@ -102,9 +102,9 @@ export default function Home() {
               href={badge.href}
               className={`group absolute flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 shadow-lg transition-colors hover:bg-brand hover:text-white sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-base ${badge.position}`}
             >
-              <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+              <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75 group-hover:bg-white" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand transition-colors group-hover:bg-white sm:h-2.5 sm:w-2.5" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand transition-colors group-hover:bg-white sm:h-3 sm:w-3" />
               </span>
               <span>{badge.label}</span>
             </Link>
