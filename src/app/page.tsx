@@ -119,12 +119,12 @@ export default function Home() {
           {services.map((service) => (
             <div
               key={service.title}
-              className={`rounded-2xl border p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
-                service.highlight ? "border-brand" : "border-zinc-200"
+              className={`rounded-2xl p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
+                service.highlight ? "border-2 border-brand" : "border border-zinc-200"
               }`}
             >
               <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-semibold text-zinc-900">{service.title}</h3>
+                <h3 className="text-lg font-semibold text-brand">{service.title}</h3>
                 {service.isNew && (
                   <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
                     Novinka

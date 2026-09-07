@@ -57,12 +57,12 @@ export default function SluzbyPage() {
           <div
             key={service.title}
             id={service.id}
-            className={`scroll-mt-24 rounded-2xl border p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
-              service.highlight ? "border-brand" : "border-zinc-200"
+            className={`scroll-mt-24 rounded-2xl p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
+              service.highlight ? "border-2 border-brand" : "border border-zinc-200"
             }`}
           >
             <div className="flex items-center justify-center gap-2">
-              <h2 className="text-xl font-semibold text-zinc-900">{service.title}</h2>
+              <h2 className="text-xl font-semibold text-brand">{service.title}</h2>
               {service.isNew && (
                 <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
                   Novinka
