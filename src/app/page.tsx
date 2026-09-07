@@ -134,35 +134,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/5 bg-zinc-50 py-10">
-        <p className="text-center text-sm font-semibold uppercase tracking-wide text-brand">
-          Naši klienti
-        </p>
-        {[clientLogosRow1, clientLogosRow2].map((row, rowIndex) => (
-          <div key={rowIndex} className={`marquee-fade relative overflow-hidden ${rowIndex === 0 ? "mt-6" : "mt-4"}`}>
-            <div
-              className={`flex w-max items-center gap-20 sm:gap-24 ${
-                rowIndex === 0 ? "animate-marquee" : "animate-marquee-reverse"
-              }`}
-            >
-              {[...row, ...row].map((client, i) => (
-                <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
-                  <Image
-                    src={client.src}
-                    alt={client.name}
-                    width={client.width}
-                    height={client.height}
-                    className="h-full w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-                  />
-                </div>
-              ))}
+      <p className="mx-auto max-w-6xl px-6 pt-16 text-center text-base font-semibold uppercase tracking-wide text-brand">
+        Důvěřují nám
+      </p>
+      <section className="mt-6 border-y border-black/5 bg-zinc-50 py-10">
+        <div className="flex flex-col justify-center gap-8">
+          {[clientLogosRow1, clientLogosRow2].map((row, rowIndex) => (
+            <div key={rowIndex} className="marquee-fade relative overflow-hidden">
+              <div
+                className={`flex w-max items-center gap-20 sm:gap-24 ${
+                  rowIndex === 0 ? "animate-marquee" : "animate-marquee-reverse"
+                }`}
+              >
+                {[...row, ...row].map((client, i) => (
+                  <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
+                    <Image
+                      src={client.src}
+                      alt={client.name}
+                      width={client.width}
+                      height={client.height}
+                      className="h-full w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
-        <h2 className="text-center text-sm font-semibold uppercase tracking-wide text-brand">Naše služby</h2>
+        <h2 className="text-center text-base font-semibold uppercase tracking-wide text-brand">Naše služby</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
