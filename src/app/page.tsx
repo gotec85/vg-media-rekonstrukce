@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <p className="mx-auto max-w-6xl px-6 pt-6 text-center text-lg font-semibold uppercase tracking-wide text-brand">
+      <p className="mx-auto max-w-6xl px-6 pt-6 text-center text-2xl font-bold text-brand sm:text-3xl">
         Důvěřují nám
       </p>
       <section className="mt-6 border-y border-black/5 bg-zinc-50 py-10">
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 pb-20 pt-10">
-        <h2 className="text-center text-lg font-semibold uppercase tracking-wide text-brand">Naše služby</h2>
+        <h2 className="text-center text-2xl font-bold text-brand sm:text-3xl">Naše služby</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Probereme váš projekt?</h2>
+        <h2 className="text-2xl font-bold text-brand sm:text-3xl">Probereme váš projekt?</h2>
         <p className="mx-auto mt-4 max-w-xl text-zinc-600">
           Ozvěte se nám, probereme rozpočet, cíle a jak by mohla spolupráce vypadat.
         </p>
