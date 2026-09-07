@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt — VG Media",
@@ -31,13 +32,7 @@ export default function KontaktPage() {
         </p>
       </div>
 
-      <div className="mt-14 rounded-2xl border border-dashed border-zinc-300 p-8 text-center text-zinc-400">
-        <p className="text-sm">Kontaktní formulář</p>
-        <p className="mt-2 text-xs">
-          Zatím jen e-mail/telefon výše — formulář se serverless odesíláním doplníme (viz CLAUDE.md,
-          sekce 7).
-        </p>
-      </div>
+      <ContactForm />
     </div>
   );
 }
