@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <p className="mx-auto max-w-6xl px-6 pt-16 text-center text-base font-semibold uppercase tracking-wide text-brand">
+      <p className="mx-auto max-w-6xl px-6 pt-6 text-center text-lg font-semibold uppercase tracking-wide text-brand">
         Důvěřují nám
       </p>
       <section className="mt-6 border-y border-black/5 bg-zinc-50 py-10">
@@ -163,8 +163,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
-        <h2 className="text-center text-base font-semibold uppercase tracking-wide text-brand">Naše služby</h2>
+      <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 pb-20 pt-10">
+        <h2 className="text-center text-lg font-semibold uppercase tracking-wide text-brand">Naše služby</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
