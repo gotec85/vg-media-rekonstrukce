@@ -10,7 +10,7 @@ const services = [
 ];
 
 const links = [
-  { href: "/reference", label: "Reference" },
+  { href: "/reference", label: "Case studies" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
