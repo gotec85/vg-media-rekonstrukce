@@ -46,7 +46,7 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="mt-14 rounded-2xl border border-brand bg-brand/5 p-8 text-center">
+      <div id="form" className="mt-14 scroll-mt-24 rounded-2xl border border-brand bg-brand/5 p-8 text-center">
         <p className="font-semibold text-zinc-900">Díky za zprávu!</p>
         <p className="mt-2 text-sm text-zinc-600">Ozveme se vám co nejdřív.</p>
       </div>
@@ -54,7 +54,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-14 space-y-5">
+    <form id="form" onSubmit={handleSubmit} className="mt-14 scroll-mt-24 space-y-5">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-zinc-900">

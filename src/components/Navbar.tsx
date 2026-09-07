@@ -66,10 +66,10 @@ export default function Navbar() {
           ))}
         </nav>
         <Link
-          href="/kontakt"
+          href="/kontakt#form"
           className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
         >
-          Nezávazný audit
+          Kontakt
         </Link>
       </div>
     </header>
