@@ -127,7 +127,8 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 ## 9. Co ještě chybí (checklist — než půjde web do finální podoby)
 
 - [x] Přesná brand barva (#A81B1E) — dodáno a zavedeno v kódu
-- [ ] Vektorové logo (SVG/AI/Figma) — logo.png, co Martin poslal, je fotorealistický 3D render (bevel/stín na "MEDIA"), ne čistý vektor. V navigaci proto místo obrázku dočasně běží textové wordmark (Poppins ExtraBold, červená #A81B1E) — vypadá čistě/ploše, ale je to náhrada, ne finální logo. Až Martin pošle vektor, vrátit se k obrázkovému logu.
+- [x] logo.png má stále 3D look (šedý stín pod/za písmeny), to je záměrně ponechané — Martin chce původní vzhled loga. Opravena byla jen chyba: písmena D a A měla v díře (počítadle) vyplněnou šedou skvrnu místo průhledného otvoru jako ostatní písmena — teď mají čistou průhlednou díru jako zbytek loga.
+- [ ] Vektorové logo (SVG/AI/Figma) pořád nemáme — logo.png je fotorealistický render, ne čistý vektor. Zatím to nevadí, web běží s tímhle rastrovým souborem, ale pro budoucí škálování/tisk by se hodil vektor, pokud ho Martin má.
 - [x] Next.js projekt založen, MVP stránky (Home, Služby, Reference, Kontakt) naskriptované a lokální build prochází
 - [x] Repo propojeno s Vercelem, produkční doména vgmedia.cz ukazuje na nový build (deploy z commitu 1488d0d proběhl bez chyb)
 - [x] Rozpočet za posledních 12 měsíců — 13 831 089 Kč (číslo známe, viz níže)
