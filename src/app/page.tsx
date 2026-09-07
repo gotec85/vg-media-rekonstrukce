@@ -47,6 +47,9 @@ const clientLogos = [
   { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
 ];
 
+const clientLogosRow1 = clientLogos.slice(0, 5);
+const clientLogosRow2 = clientLogos.slice(5);
+
 const heroBadges = [
   {
     label: "Meta Ads",
@@ -135,21 +138,27 @@ export default function Home() {
         <p className="text-center text-xs font-semibold uppercase tracking-wide text-zinc-400">
           Klienti, kterým pomáháme růst
         </p>
-        <div className="relative mt-6 overflow-hidden">
-          <div className="flex w-max animate-marquee items-center gap-20 sm:gap-24">
-            {[...clientLogos, ...clientLogos].map((client, i) => (
-              <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
-                <Image
-                  src={client.src}
-                  alt={client.name}
-                  width={client.width}
-                  height={client.height}
-                  className="h-full w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-                />
-              </div>
-            ))}
+        {[clientLogosRow1, clientLogosRow2].map((row, rowIndex) => (
+          <div key={rowIndex} className={`relative overflow-hidden ${rowIndex === 0 ? "mt-6" : "mt-4"}`}>
+            <div
+              className={`flex w-max items-center gap-20 sm:gap-24 ${
+                rowIndex === 0 ? "animate-marquee" : "animate-marquee-reverse"
+              }`}
+            >
+              {[...row, ...row].map((client, i) => (
+                <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
+                  <Image
+                    src={client.src}
+                    alt={client.name}
+                    width={client.width}
+                    height={client.height}
+                    className="h-full w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ))}
       </section>
 
       <section id="co-delame" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
