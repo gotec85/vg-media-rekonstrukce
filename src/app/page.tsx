@@ -3,24 +3,29 @@ import Image from "next/image";
 
 const services = [
   {
+    id: "meta-ads",
     title: "Meta Ads",
     description:
       "Správa reklam na Facebooku a Instagramu zaměřená na výkon, ne na proklikávání rozpočtu.",
   },
   {
+    id: "google-ads",
     title: "Google Ads",
     description: "Výkonnostní kampaně ve vyhledávání a obsahové síti Google.",
   },
   {
+    id: "ai-video",
     title: "AI video",
     description:
       "Reklamní videokreativy vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
   },
   {
+    id: "bannery",
     title: "AI fotky a bannery",
     description: "Display a bannerová reklamní grafika napříč sítěmi.",
   },
   {
+    id: "reklama-v-ai-chatech",
     title: "Reklama v AI chatech",
     description:
       "Nová disciplína, se kterou jsme mezi prvními na trhu, reklama tam, kde lidé hledají odpovědi přes AI.",
@@ -124,7 +129,12 @@ export default function Home() {
               }`}
             >
               <div className="flex items-center justify-center gap-2">
-                <h3 className="text-lg font-semibold text-brand">{service.title}</h3>
+                <Link
+                  href={`/sluzby#${service.id}`}
+                  className="text-lg font-semibold text-brand hover:underline"
+                >
+                  {service.title}
+                </Link>
                 {service.isNew && (
                   <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
                     Novinka
