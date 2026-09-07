@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -18,8 +17,19 @@ export default function Navbar() {
   return (
     <header className="border-b border-black/5">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="VG Media" width={140} height={34} priority />
+        <Link href="/" className="flex items-center gap-2">
+          <span
+            className="flex h-9 w-9 items-center justify-center rounded-md bg-brand text-base font-extrabold text-white"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            VG
+          </span>
+          <span
+            className="text-xl font-extrabold tracking-tight text-brand"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            MEDIA
+          </span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-700 sm:flex">
           <div className="group relative">
