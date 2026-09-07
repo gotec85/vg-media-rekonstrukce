@@ -159,7 +159,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Probereme váš projekt?</h2>
         <p className="mx-auto mt-4 max-w-xl text-zinc-600">
-          Ozvěte se nám. Na krátkém úvodním callu proberete rozpočet, cíle a jestli si sedneme.
+          Ozvěte se nám, probereme rozpočet, cíle a jestli si spolu sedneme.
         </p>
         <Link
           href="/kontakt"
