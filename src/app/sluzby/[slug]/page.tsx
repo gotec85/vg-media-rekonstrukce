@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: Props) {
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900">{service.title}</h1>
         {service.isNew && (
-          <span className="rounded-full bg-brand px-2.5 py-1 text-xs font-semibold text-white">
+          <span className="animate-pulse rounded-full bg-brand px-2.5 py-1 text-xs font-semibold text-white">
             Novinka
           </span>
         )}

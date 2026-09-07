@@ -145,7 +145,7 @@ export default function Home() {
               <div className="flex items-center justify-center gap-2">
                 <h3 className="text-lg font-semibold text-brand">{service.title}</h3>
                 {service.isNew && (
-                  <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
+                  <span className="animate-pulse rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
                     Novinka
                   </span>
                 )}
