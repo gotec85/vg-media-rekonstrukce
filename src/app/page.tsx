@@ -122,19 +122,15 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Co pro klienty děláme</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div
+            <Link
               key={service.title}
-              className={`rounded-2xl p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
+              href={`/sluzby#${service.id}`}
+              className={`block rounded-2xl p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
                 service.highlight ? "border-2 border-brand" : "border border-zinc-200"
               }`}
             >
               <div className="flex items-center justify-center gap-2">
-                <Link
-                  href={`/sluzby#${service.id}`}
-                  className="text-lg font-semibold text-brand hover:underline"
-                >
-                  {service.title}
-                </Link>
+                <h3 className="text-lg font-semibold text-brand">{service.title}</h3>
                 {service.isNew && (
                   <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
                     Novinka
@@ -142,7 +138,7 @@ export default function Home() {
                 )}
               </div>
               <p className="mt-2 text-sm leading-6 text-zinc-600">{service.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
