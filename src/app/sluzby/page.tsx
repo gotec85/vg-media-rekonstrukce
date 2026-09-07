@@ -1,44 +1,11 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Služby — VG Media",
+  title: "Služby - VG Media",
   description: "Meta Ads, Google Ads, AI video, reklama v AI chatech a bannery.",
 };
-
-const services = [
-  {
-    id: "meta-ads",
-    title: "Meta Ads",
-    description:
-      "Nastavení a správa reklam na Facebooku a Instagramu — od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat.",
-  },
-  {
-    id: "google-ads",
-    title: "Google Ads",
-    description:
-      "Výkonnostní kampaně ve vyhledávání, obsahové síti a nákupních kampaních Google, propojené s Meta Ads do jedné strategie.",
-  },
-  {
-    id: "ai-video",
-    title: "AI video",
-    description:
-      "Reklamní video kreativy vytvořené pomocí AI nástrojů, rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
-  },
-  {
-    id: "bannery",
-    title: "AI fotky a bannery",
-    description:
-      "Display a bannerová reklamní grafika napříč reklamními sítěmi, navazující na vizuální styl klienta.",
-  },
-  {
-    id: "reklama-v-ai-chatech",
-    title: "Reklama v AI chatech",
-    description:
-      "Nová disciplína, reklama v prostředí AI chatbotů a AI vyhledávání. Jsme mezi prvními agenturami v Česku, které tohle klientům nabízí.",
-    highlight: true,
-    isNew: true,
-  },
-];
 
 export default function SluzbyPage() {
   return (
@@ -48,16 +15,16 @@ export default function SluzbyPage() {
         Performance a AI reklama pod jednou střechou
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-        Kombinujeme osvědčené kanály (Meta Ads, Google Ads) s tím, co teprve přichází — AI video a
+        Kombinujeme osvědčené kanály (Meta Ads, Google Ads) s tím, co teprve přichází, AI video a
         reklamou v AI chatech.
       </p>
 
-      <div className="mt-14 space-y-10">
+      <div className="mt-14 space-y-6">
         {services.map((service) => (
-          <div
-            key={service.title}
-            id={service.id}
-            className={`scroll-mt-24 rounded-2xl p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
+          <Link
+            key={service.id}
+            href={`/sluzby/${service.id}`}
+            className={`block scroll-mt-24 rounded-2xl p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
               service.highlight ? "border-2 border-brand" : "border border-zinc-200"
             }`}
           >
@@ -70,7 +37,7 @@ export default function SluzbyPage() {
               )}
             </div>
             <p className="mt-3 max-w-3xl leading-7 text-zinc-600">{service.description}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,38 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const services = [
-  {
-    id: "meta-ads",
-    title: "Meta Ads",
-    description:
-      "Správa reklam na Facebooku a Instagramu zaměřená na výkon, ne na proklikávání rozpočtu.",
-  },
-  {
-    id: "google-ads",
-    title: "Google Ads",
-    description: "Výkonnostní kampaně ve vyhledávání a obsahové síti Google.",
-  },
-  {
-    id: "ai-video",
-    title: "AI video",
-    description:
-      "Reklamní videokreativy vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
-  },
-  {
-    id: "bannery",
-    title: "AI fotky a bannery",
-    description: "Display a bannerová reklamní grafika napříč sítěmi.",
-  },
-  {
-    id: "reklama-v-ai-chatech",
-    title: "Reklama v AI chatech",
-    description:
-      "Nová disciplína, se kterou jsme mezi prvními na trhu, reklama tam, kde lidé hledají odpovědi přes AI.",
-    highlight: true,
-    isNew: true,
-  },
-];
+import { services } from "@/data/services";
 
 const clientLogos = [
   { name: "Notificard", src: "/clients/notificard.png", width: 296, height: 176 },
@@ -53,27 +21,27 @@ const clientLogosRow2 = clientLogos.slice(5);
 const heroBadges = [
   {
     label: "Meta Ads",
-    href: "/sluzby#meta-ads",
+    href: "/sluzby/meta-ads",
     position: "left-3 top-4 sm:-left-8 sm:top-6",
   },
   {
     label: "AI grafika",
-    href: "/sluzby#bannery",
+    href: "/sluzby/bannery",
     position: "right-3 top-4 sm:-right-6 sm:top-10",
   },
   {
     label: "Google Ads",
-    href: "/sluzby#google-ads",
+    href: "/sluzby/google-ads",
     position: "right-3 top-1/2 sm:-right-8 sm:top-[58%]",
   },
   {
     label: "AI video",
-    href: "/sluzby#ai-video",
+    href: "/sluzby/ai-video",
     position: "bottom-16 left-3 sm:-left-6",
   },
   {
     label: "Reklama v AI chatech",
-    href: "/sluzby#reklama-v-ai-chatech",
+    href: "/sluzby/reklama-v-ai-chatech",
     position: "bottom-3 right-3 sm:-bottom-5 sm:right-10",
   },
 ];
@@ -168,8 +136,8 @@ export default function Home() {
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
-              key={service.title}
-              href={`/sluzby#${service.id}`}
+              key={service.id}
+              href={`/sluzby/${service.id}`}
               className={`block rounded-2xl p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
                 service.highlight ? "border-2 border-brand" : "border border-zinc-200"
               }`}
@@ -182,7 +150,7 @@ export default function Home() {
                   </span>
                 )}
               </div>
-              <p className="mt-2 text-sm leading-6 text-zinc-600">{service.description}</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">{service.shortDescription}</p>
             </Link>
           ))}
         </div>

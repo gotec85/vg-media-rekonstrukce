@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  { href: "/sluzby#meta-ads", label: "Meta Ads" },
-  { href: "/sluzby#google-ads", label: "Google Ads" },
-  { href: "/sluzby#ai-video", label: "AI video" },
-  { href: "/sluzby#bannery", label: "AI fotky a bannery" },
-  { href: "/sluzby#reklama-v-ai-chatech", label: "Reklama v AI chatech" },
+  { href: "/sluzby/meta-ads", label: "Meta Ads" },
+  { href: "/sluzby/google-ads", label: "Google Ads" },
+  { href: "/sluzby/ai-video", label: "AI video" },
+  { href: "/sluzby/bannery", label: "AI fotky a bannery" },
+  { href: "/sluzby/reklama-v-ai-chatech", label: "Reklama v AI chatech" },
 ];
 
 const links = [
