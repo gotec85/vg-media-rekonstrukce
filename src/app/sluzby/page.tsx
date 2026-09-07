@@ -58,7 +58,7 @@ export default function SluzbyPage() {
             key={service.title}
             id={service.id}
             className={`scroll-mt-24 rounded-2xl border p-8 transition-colors hover:border-brand hover:bg-brand/5 ${
-              service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
+              service.highlight ? "border-brand" : "border-zinc-200"
             }`}
           >
             <div className="flex items-center justify-center gap-2">

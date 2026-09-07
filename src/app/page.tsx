@@ -120,7 +120,7 @@ export default function Home() {
             <div
               key={service.title}
               className={`rounded-2xl border p-6 transition-colors hover:border-brand hover:bg-brand/5 ${
-                service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
+                service.highlight ? "border-brand" : "border-zinc-200"
               }`}
             >
               <div className="flex items-center justify-center gap-2">
