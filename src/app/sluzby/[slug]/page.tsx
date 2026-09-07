@@ -36,7 +36,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
       <p className="text-sm font-semibold uppercase tracking-wide text-brand">
-        <Link href="/sluzby" className="hover:underline">
+        <Link href="/#co-delame" className="hover:underline">
           Služby
         </Link>
       </p>

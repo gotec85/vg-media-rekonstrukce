@@ -24,7 +24,7 @@ export default function Navbar() {
         <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-700 sm:flex">
           <div className="group relative">
             <Link
-              href="/sluzby"
+              href="/#co-delame"
               className="flex items-center gap-1 py-2 transition-colors hover:text-brand"
             >
               Služby
