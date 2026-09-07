@@ -135,8 +135,8 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/5 bg-zinc-50 py-10">
-        <p className="text-center text-xs font-semibold uppercase tracking-wide text-zinc-400">
-          Klienti, kterým pomáháme růst
+        <p className="text-center text-sm font-semibold uppercase tracking-wide text-brand">
+          Naši klienti
         </p>
         {[clientLogosRow1, clientLogosRow2].map((row, rowIndex) => (
           <div key={rowIndex} className={`marquee-fade relative overflow-hidden ${rowIndex === 0 ? "mt-6" : "mt-4"}`}>
