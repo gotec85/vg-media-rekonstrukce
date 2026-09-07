@@ -61,7 +61,7 @@ export default function SluzbyPage() {
               service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
             }`}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <h2 className="text-xl font-semibold text-zinc-900">{service.title}</h2>
               {service.isNew && (
                 <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">

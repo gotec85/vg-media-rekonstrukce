@@ -123,7 +123,7 @@ export default function Home() {
                 service.highlight ? "border-brand bg-brand/5" : "border-zinc-200"
               }`}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <h3 className="text-lg font-semibold text-zinc-900">{service.title}</h3>
                 {service.isNew && (
                   <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">
