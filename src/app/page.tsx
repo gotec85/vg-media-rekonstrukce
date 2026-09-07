@@ -136,7 +136,7 @@ export default function Home() {
           Klienti, kterým pomáháme růst
         </p>
         <div className="relative mt-6 overflow-hidden">
-          <div className="flex w-max animate-marquee items-center gap-14">
+          <div className="flex w-max animate-marquee items-center gap-20 sm:gap-24">
             {[...clientLogos, ...clientLogos].map((client, i) => (
               <div key={`${client.name}-${i}`} className="flex h-10 flex-shrink-0 items-center sm:h-12">
                 <Image
