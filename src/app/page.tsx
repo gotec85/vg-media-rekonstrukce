@@ -13,10 +13,18 @@ const clientLogos = [
   { name: "Legistes", src: "/clients/legistes.png", width: 216, height: 56 },
   { name: "Elementary POS", src: "/clients/elementary-pos.png", width: 308, height: 44 },
   { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
+  { name: "Sauna Project", src: "/clients/sauna-project.png", width: 116, height: 28 },
+  { name: "Automycka MYJE.TO", src: "/clients/automycka-myje-to.png", width: 268, height: 32 },
+  { name: "App Wizard", src: "/clients/app-wizard.png", width: 217, height: 56 },
+  { name: "Fotoeshop", src: "/clients/fotoeshop.png", width: 381, height: 72 },
+  { name: "Gom Production", src: "/clients/gom-production.png", width: 158, height: 46 },
+  { name: "Eco Vehicle", src: "/clients/eco-vehicle.png", width: 134, height: 46 },
+  { name: "Eco Servis", src: "/clients/eco-servis.png", width: 99, height: 93 },
+  { name: "Finex", src: "/clients/finex.png", width: 127, height: 40 },
 ];
 
-const clientLogosRow1 = clientLogos.slice(0, 5);
-const clientLogosRow2 = clientLogos.slice(5);
+const clientLogosRow1 = clientLogos.slice(0, 9);
+const clientLogosRow2 = clientLogos.slice(9);
 
 const heroBadges = [
   {
