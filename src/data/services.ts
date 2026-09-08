@@ -5,6 +5,16 @@ export type Service = {
   description: string;
   highlight?: boolean;
   isNew?: boolean;
+  offerings?: Offering[];
+};
+
+export type Offering = {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  priceUnit?: string;
+  icon: "search" | "chart" | "user";
 };
 
 export const services: Service[] = [
@@ -14,7 +24,36 @@ export const services: Service[] = [
     shortDescription:
       "Správa reklam na Facebooku a Instagramu zaměřená na výkon, ne na proklikávání rozpočtu.",
     description:
-      "Nastavení a správa reklam na Facebooku a Instagramu, od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat.",
+      "Nastavení a správa reklam na Facebooku a Instagramu, od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat. Víme, jak vystoupit ze šedi konkurence a ve správný čas zaujmout vaši cílovku.",
+    offerings: [
+      {
+        id: "audit",
+        title: "Meta audit",
+        description:
+          "Projdeme vaše kampaně na Facebooku a Instagramu od A do Z. Zkontrolujeme nastavení účtu, cílení, strukturu kampaní, využití formátů i výkon kreativ. Výsledkem je srozumitelný report s jasným plánem, co upravit, kde ubrat a kam má smysl přidat.",
+        price: "od 3 900 Kč",
+        priceUnit: "bez DPH",
+        icon: "search",
+      },
+      {
+        id: "sprava-kampani",
+        title: "Správa Meta kampaní",
+        description:
+          "Zadáme cíl kampaně, definujeme publikum, postaráme se o kreativy a kampaně pravidelně vyhodnocujeme a optimalizujeme podle dat. Facebook i Instagram nastavíme tak, aby přinášely nové zákazníky, ne jen proklikaný rozpočet.",
+        price: "od 9 900 Kč",
+        priceUnit: "měsíčně, bez DPH",
+        icon: "chart",
+      },
+      {
+        id: "skoleni",
+        title: "Meta školení",
+        description:
+          "Chcete si kampaně řídit sami nebo se v nich lépe orientovat? Připravíme školení šité na míru vaší značce a týmu, srozumitelné i bez předchozích zkušeností s reklamou na Facebooku a Instagramu.",
+        price: "od 1 900 Kč",
+        priceUnit: "za hodinu, bez DPH",
+        icon: "user",
+      },
+    ],
   },
   {
     id: "google-ads",
