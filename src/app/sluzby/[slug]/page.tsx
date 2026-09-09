@@ -64,20 +64,8 @@ export default async function ServicePage({ params }: Props) {
   const hasOfferings = !!service.offerings && service.offerings.length > 0;
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-20">
-      <nav aria-label="Drobečková navigace" className="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
-        <Link href="/" className="hover:text-brand hover:underline">
-          Domů
-        </Link>
-        <span aria-hidden="true">/</span>
-        <Link href="/#co-delame" className="hover:text-brand hover:underline">
-          Služby
-        </Link>
-        <span aria-hidden="true">/</span>
-        <span className="text-zinc-600">{service.title}</span>
-      </nav>
-
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+    <div className="mx-auto max-w-3xl px-6 pb-20 pt-12">
+      <div className="flex flex-wrap items-center gap-3">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900">{service.title}</h1>
         {service.isNew && (
           <span className="animate-pulse rounded-full bg-brand px-2.5 py-1 text-xs font-semibold text-white">
@@ -89,18 +77,6 @@ export default async function ServicePage({ params }: Props) {
 
       {hasOfferings ? (
         <>
-          <div className="mt-10 flex flex-wrap gap-2">
-            {service.offerings!.map((offering) => (
-              <a
-                key={offering.id}
-                href={`#${offering.id}`}
-                className="rounded-full border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-brand hover:text-brand"
-              >
-                {offering.title}
-              </a>
-            ))}
-          </div>
-
           <div className="mt-14 space-y-16">
             {service.offerings!.map((offering) => (
               <section key={offering.id} id={offering.id} className="scroll-mt-24">
