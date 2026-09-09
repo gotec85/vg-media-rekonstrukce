@@ -103,11 +103,6 @@ export default async function ServicePage({ params }: Props) {
               </section>
             ))}
           </div>
-
-          <p className="mt-14 text-center text-sm text-zinc-500">
-            Se správou reklam máme 7 let zkušeností. Ceny jsou orientační, přesnou nabídku
-            probereme podle rozsahu a rozpočtu vaší kampaně.
-          </p>
         </>
       ) : (
         <div className="mt-14 rounded-2xl border border-zinc-200 p-8 text-center">
