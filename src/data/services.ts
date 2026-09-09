@@ -32,7 +32,6 @@ export const services: Service[] = [
         description:
           "Projdeme vaše kampaně na Facebooku a Instagramu od A do Z. Zkontrolujeme nastavení účtu, cílení, strukturu kampaní, využití formátů i výkon kreativ. Výsledkem je srozumitelný report s jasným plánem, co upravit, kde ubrat a kam má smysl přidat.",
         price: "od 3 900 Kč",
-        priceUnit: "bez DPH",
         icon: "search",
       },
       {
@@ -41,7 +40,7 @@ export const services: Service[] = [
         description:
           "Zadáme cíl kampaně, definujeme publikum, postaráme se o kreativy a kampaně pravidelně vyhodnocujeme a optimalizujeme podle dat. Facebook i Instagram nastavíme tak, aby přinášely nové zákazníky, ne jen proklikaný rozpočet.",
         price: "od 9 900 Kč",
-        priceUnit: "měsíčně, bez DPH",
+        priceUnit: "měsíčně",
         icon: "chart",
       },
       {
@@ -50,7 +49,7 @@ export const services: Service[] = [
         description:
           "Chcete si kampaně řídit sami nebo se v nich lépe orientovat? Připravíme školení šité na míru vaší značce a týmu, srozumitelné i bez předchozích zkušeností s reklamou na Facebooku a Instagramu.",
         price: "od 1 900 Kč",
-        priceUnit: "za hodinu, bez DPH",
+        priceUnit: "za hodinu",
         icon: "user",
       },
     ],
