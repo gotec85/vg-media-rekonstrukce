@@ -6,6 +6,8 @@ export type Service = {
   highlight?: boolean;
   isNew?: boolean;
   offerings?: Offering[];
+  image?: string;
+  imageAlt?: string;
 };
 
 export type Offering = {
@@ -25,6 +27,8 @@ export const services: Service[] = [
       "Správa reklam na Facebooku a Instagramu zaměřená na výkon, ne na proklikávání rozpočtu.",
     description:
       "Nastavení a správa reklam na Facebooku a Instagramu, od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat. Víme, jak vystoupit ze šedi konkurence a ve správný čas zaujmout vaši cílovku.",
+    image: "/meta-ads-team.jpg",
+    imageAlt: "Tým VG Media plánuje strukturu kampaně u flipchartu",
     offerings: [
       {
         id: "audit",

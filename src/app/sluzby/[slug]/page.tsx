@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -74,6 +75,18 @@ export default async function ServicePage({ params }: Props) {
         )}
       </div>
       <p className="mt-6 text-lg leading-8 text-zinc-600">{service.description}</p>
+
+      {service.image && (
+        <div className="relative mt-10 aspect-[16/10] w-full overflow-hidden rounded-3xl bg-zinc-100 shadow-xl">
+          <Image
+            src={service.image}
+            alt={service.imageAlt ?? service.title}
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+      )}
 
       {hasOfferings ? (
         <>
