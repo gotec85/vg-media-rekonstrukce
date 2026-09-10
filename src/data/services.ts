@@ -76,7 +76,7 @@ export const services: Service[] = [
         id: "sprava-kampani",
         title: "Správa Google kampaní",
         description:
-          "Nastavíme a pravidelně optimalizujeme kampaně ve vyhledávání, Shopping a Performance Max podle dat z Google Ads i Google Analytics. Rozpočet směřujeme tam, kde skutečně vznikají poptávky a objednávky, ne jen kliky.",
+          "Nastavíme a pravidelně optimalizujeme kampaně ve vyhledávání, Shopping a Performance Max podle dat z Google Ads i Google Analytics, včetně optimalizace produktového feedu v Merchant Center. Rozpočet směřujeme tam, kde skutečně vznikají poptávky a objednávky, ne jen kliky.",
         price: "od 9 900 Kč",
         priceUnit: "měsíčně",
         icon: "chart",
