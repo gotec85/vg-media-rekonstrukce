@@ -27,8 +27,6 @@ export const services: Service[] = [
       "Správa reklam na Facebooku a Instagramu zaměřená na výkon, ne na proklikávání rozpočtu.",
     description:
       "Nastavení a správa reklam na Facebooku a Instagramu, od cílení přes kreativy až po pravidelné vyhodnocování a optimalizaci na základě dat. Víme, jak vystoupit ze šedi konkurence a ve správný čas zaujmout vaši cílovku.",
-    image: "/meta-ads-team.jpg",
-    imageAlt: "Tým VG Media plánuje strukturu kampaně u flipchartu",
     offerings: [
       {
         id: "audit",
@@ -61,9 +59,38 @@ export const services: Service[] = [
   {
     id: "google-ads",
     title: "Google Ads",
-    shortDescription: "Výkonnostní kampaně ve vyhledávání a obsahové síti Google.",
+    shortDescription:
+      "Výkonnostní kampaně ve vyhledávání, Shopping a Performance Max zaměřené na konverze, ne na prokliky.",
     description:
-      "Výkonnostní kampaně ve vyhledávání, obsahové síti a nákupních kampaních Google, propojené s Meta Ads do jedné strategie.",
+      "Nastavení a správa kampaní ve vyhledávání Google, v Google Display síti, Performance Max a nákupních (Shopping) kampaních, propojené s daty z Google Analytics tak, aby přiváděly poptávky a objednávky, ne jen návštěvy webu.",
+    offerings: [
+      {
+        id: "audit",
+        title: "Google audit",
+        description:
+          "Projdeme váš účet Google Ads od A do Z. Zkontrolujeme strukturu kampaní, klíčová slova, nastavení konverzí i propojení s Google Analytics. Výsledkem je srozumitelný report s jasným plánem, co upravit, kde ubrat rozpočet a kam má smysl přidat.",
+        price: "od 3 900 Kč",
+        icon: "search",
+      },
+      {
+        id: "sprava-kampani",
+        title: "Správa Google kampaní",
+        description:
+          "Nastavíme a pravidelně optimalizujeme kampaně ve vyhledávání, Shopping a Performance Max podle dat z Google Ads i Google Analytics. Rozpočet směřujeme tam, kde skutečně vznikají poptávky a objednávky, ne jen kliky.",
+        price: "od 9 900 Kč",
+        priceUnit: "měsíčně",
+        icon: "chart",
+      },
+      {
+        id: "skoleni",
+        title: "Google školení",
+        description:
+          "Chcete si kampaně řídit sami nebo se v nich lépe orientovat? Připravíme školení šité na míru vašemu byznysu, srozumitelné i bez předchozích zkušeností s Google Ads.",
+        price: "od 1 900 Kč",
+        priceUnit: "za hodinu",
+        icon: "user",
+      },
+    ],
   },
   {
     id: "ai-video",
