@@ -111,21 +111,23 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.images && offering.images.length > 0 && (
-                  <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                    {offering.images.map((image) => (
-                      <div
-                        key={image}
-                        className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-100"
-                      >
-                        <Image
-                          src={image}
-                          alt={offering.title}
-                          fill
-                          sizes="(min-width: 640px) 25vw, 50vw"
-                          className="object-cover"
-                        />
-                      </div>
-                    ))}
+                  <div className="marquee-fade relative -mx-6 mt-6 overflow-x-hidden overflow-y-visible py-3 sm:mx-0">
+                    <div className="animate-marquee flex w-max items-center gap-4 px-6 hover:[animation-play-state:paused] sm:gap-6 sm:px-0">
+                      {[...offering.images, ...offering.images].map((image, index) => (
+                        <div
+                          key={`${image}-${index}`}
+                          className="relative aspect-square w-36 flex-shrink-0 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm transition-transform duration-300 ease-out hover:z-20 hover:scale-150 hover:shadow-2xl sm:w-48"
+                        >
+                          <Image
+                            src={image}
+                            alt={offering.title}
+                            fill
+                            sizes="200px"
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
 
