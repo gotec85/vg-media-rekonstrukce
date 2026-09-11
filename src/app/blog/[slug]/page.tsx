@@ -86,6 +86,13 @@ export default async function BlogArticlePage({ params }: Props) {
           Kontaktujte nás
         </Link>
       </div>
+
+      <Link
+        href="/blog"
+        className="mt-10 inline-block text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
+      >
+        ← Zpět na blog
+      </Link>
     </div>
   );
 }

@@ -52,11 +52,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image src="/logo.png" alt="VG Media" width={140} height={34} priority />
         </Link>
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {services.map((service) => (
             <NavLink key={service.href} href={service.href} label={service.label} isActive={pathname === service.href} />
           ))}
