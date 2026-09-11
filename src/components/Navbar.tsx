@@ -31,7 +31,7 @@ function NavLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`relative pt-3 pb-2 text-sm font-semibold uppercase tracking-wide transition-colors ${
+      className={`relative pt-3 pb-2 text-base font-semibold uppercase tracking-wide transition-colors ${
         accent || isActive ? "text-brand" : "text-zinc-900 hover:text-brand"
       }`}
     >
@@ -67,7 +67,7 @@ export default function Navbar() {
           <Link
             href="/kontakt#form"
             onClick={() => setOpen(false)}
-            className="rounded-full bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
+            className="rounded-full bg-brand px-6 py-3 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
           >
             Kontakt
           </Link>
