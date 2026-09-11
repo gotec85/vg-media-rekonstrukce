@@ -21,7 +21,7 @@ export const articles: Article[] = [
     category: "AI reklama",
     date: "11. 9. 2026",
     image: "/blog/chatgpt-ads.png",
-    imageAlt: "Telefon s AI chatem a sponzorovanou reklamou pod odpovědí",
+    imageAlt: "Telefon zobrazující konverzaci v ChatGPT se sponzorovanou reklamou na právní poradenství",
     excerpt:
       "Po Googlu, Facebooku a Instagramu přibyl nový reklamní kanál – ChatGPT. Vysvětlujeme srozumitelně, jak reklama v AI chatu funguje, komu se vůbec zobrazí a proč může dávat smysl zkusit ji jako jedni z prvních.",
     sections: [
