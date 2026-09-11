@@ -15,7 +15,6 @@ const clientLogos = [
   { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
   { name: "Sauna Project", src: "/clients/sauna-project.png", width: 126, height: 28 },
   { name: "MYJE.TO", src: "/clients/myje-to.svg", width: 160, height: 40 },
-  { name: "App Wizard", src: "/clients/app-wizard.png", width: 217, height: 56 },
   { name: "Fotoeshop", src: "/clients/fotoeshop.png", width: 381, height: 72 },
   { name: "Gom Production", src: "/clients/gom-production.png", width: 158, height: 46 },
   { name: "Eco Vehicle", src: "/clients/eco-vehicle.png", width: 134, height: 46 },
