@@ -49,7 +49,6 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isBlogActive = pathname === "/blog" || pathname.startsWith("/blog/");
-  const isKontaktActive = pathname === "/kontakt";
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
@@ -64,13 +63,12 @@ export default function Navbar() {
           {links.map((link) => (
             <NavLink key={link.href} href={link.href} label={link.label} isActive={isBlogActive} />
           ))}
-          <NavLink href="/kontakt#form" label="Kontakt" isActive={isKontaktActive} accent />
         </nav>
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2">
           <Link
             href="/kontakt#form"
             onClick={() => setOpen(false)}
-            className="text-sm font-semibold uppercase tracking-wide text-brand transition-colors hover:text-brand-dark"
+            className="rounded-full bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
           >
             Kontakt
           </Link>
@@ -79,7 +77,7 @@ export default function Navbar() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-label={open ? "Zavřít menu" : "Otevřít menu"}
-            className="ml-2 flex h-9 w-9 items-center justify-center rounded-lg text-zinc-700 transition-colors hover:text-brand"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-700 transition-colors hover:text-brand lg:hidden"
           >
             {open ? (
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
