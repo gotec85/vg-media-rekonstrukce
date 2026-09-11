@@ -9,6 +9,8 @@ export type Article = {
   category: string;
   date: string;
   excerpt: string;
+  image?: string;
+  imageAlt?: string;
   sections: ArticleSection[];
 };
 
@@ -18,6 +20,8 @@ export const articles: Article[] = [
     title: "ChatGPT Ads v Česku: jak funguje reklama v umělé inteligenci a proč ji zkusit",
     category: "AI reklama",
     date: "11. 9. 2026",
+    image: "/blog/chatgpt-ads.png",
+    imageAlt: "Telefon s AI chatem a sponzorovanou reklamou pod odpovědí",
     excerpt:
       "Po Googlu, Facebooku a Instagramu přibyl nový reklamní kanál – ChatGPT. Vysvětlujeme srozumitelně, jak reklama v AI chatu funguje, komu se vůbec zobrazí a proč může dávat smysl zkusit ji jako jedni z prvních.",
     sections: [

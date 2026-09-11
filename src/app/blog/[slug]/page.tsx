@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { articles } from "@/data/articles";
 
@@ -43,6 +44,18 @@ export default async function BlogArticlePage({ params }: Props) {
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-zinc-900">{article.title}</h1>
       <p className="mt-4 text-sm text-zinc-400">{article.date}</p>
       <p className="mt-6 text-lg leading-8 text-zinc-600">{article.excerpt}</p>
+
+      {article.image && (
+        <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-zinc-100">
+          <Image
+            src={article.image}
+            alt={article.imageAlt ?? article.title}
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+      )}
 
       <div className="mt-12 space-y-10">
         {article.sections.map((section, i) => (
