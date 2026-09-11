@@ -13,7 +13,7 @@ const clientLogos = [
   { name: "Legistes", src: "/clients/legistes.png", width: 216, height: 56 },
   { name: "Elementary POS", src: "/clients/elementary-pos.png", width: 308, height: 44 },
   { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
-  { name: "Sauna Project", src: "/clients/sauna-project.png", width: 116, height: 28 },
+  { name: "Sauna Project", src: "/clients/sauna-project.png", width: 126, height: 28 },
   { name: "MYJE.TO", src: "/clients/myje-to.svg", width: 160, height: 40 },
   { name: "App Wizard", src: "/clients/app-wizard.png", width: 217, height: 56 },
   { name: "Fotoeshop", src: "/clients/fotoeshop.png", width: 381, height: 72 },
