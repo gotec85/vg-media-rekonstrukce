@@ -17,14 +17,6 @@ function getGridClass(count: number) {
 export default function BlogPage() {
   return (
     <div>
-      <div className="border-b border-black/5 bg-zinc-50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-            Tipy, novinky a know-how ze světa performance a AI reklamy
-          </h1>
-        </div>
-      </div>
-
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className={getGridClass(articles.length)}>
           {articles.map((article) => (
