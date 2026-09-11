@@ -9,7 +9,7 @@ const services = [
   { href: "/sluzby/meta-ads", label: "Meta Ads" },
   { href: "/sluzby/google-ads", label: "Google Ads" },
   { href: "/sluzby/ai-video", label: "AI video" },
-  { href: "/sluzby/bannery", label: "AI fotky a bannery" },
+  { href: "/sluzby/bannery", label: "AI grafika" },
   { href: "/sluzby/reklama-v-ai-chatech", label: "Reklama v AI chatech" },
 ];
 

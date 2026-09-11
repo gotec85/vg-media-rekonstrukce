@@ -95,7 +95,7 @@ export const services: Service[] = [
   },
   {
     id: "bannery",
-    title: "AI fotky a bannery",
+    title: "AI grafika",
     shortDescription: "Display a bannerová reklamní grafika napříč sítěmi.",
     description:
       "Display a bannerová reklamní grafika napříč reklamními sítěmi, navazující na vizuální styl klienta.",
