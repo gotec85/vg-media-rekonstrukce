@@ -32,18 +32,13 @@ const heroBadges = [
     position: "left-1 top-4 sm:-left-8 sm:top-6",
   },
   {
-    label: "AI grafika",
-    href: "/sluzby/bannery",
+    label: "Google Ads",
+    href: "/sluzby/google-ads",
     position: "right-1 top-4 sm:-right-6 sm:top-10",
   },
   {
-    label: "Google Ads",
-    href: "/sluzby/google-ads",
-    position: "right-1 top-1/2 sm:-right-8 sm:top-[58%]",
-  },
-  {
-    label: "AI video",
-    href: "/sluzby/ai-video",
+    label: "AI grafika a video",
+    href: "/sluzby/ai-grafika-a-video",
     position: "bottom-16 left-1 sm:-left-6",
   },
   {

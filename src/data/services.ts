@@ -86,19 +86,12 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "ai-video",
-    title: "AI video",
+    id: "ai-grafika-a-video",
+    title: "AI grafika a video",
     shortDescription:
-      "Reklamní videokreativy vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
+      "Reklamní video kreativy a bannerová grafika vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
     description:
-      "Reklamní video kreativy vytvořené pomocí AI nástrojů, rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
-  },
-  {
-    id: "bannery",
-    title: "AI grafika",
-    shortDescription: "Display a bannerová reklamní grafika napříč sítěmi.",
-    description:
-      "Display a bannerová reklamní grafika napříč reklamními sítěmi, navazující na vizuální styl klienta.",
+      "Reklamní video kreativy i display a bannerová grafika napříč reklamními sítěmi, vytvořené pomocí AI nástrojů. Rychlejší a levnější než klasická produkce, navazující na vizuální styl vaší značky a ideální na rychlé testování konceptů.",
   },
   {
     id: "reklama-v-ai-chatech",

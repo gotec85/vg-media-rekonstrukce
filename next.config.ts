@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         destination: "/#co-delame",
         permanent: true,
       },
+      {
+        source: "/sluzby/ai-video",
+        destination: "/sluzby/ai-grafika-a-video",
+        permanent: true,
+      },
+      {
+        source: "/sluzby/bannery",
+        destination: "/sluzby/ai-grafika-a-video",
+        permanent: true,
+      },
     ];
   },
 };
