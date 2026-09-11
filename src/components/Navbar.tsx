@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const services = [
   { href: "/sluzby/meta-ads", label: "Meta Ads" },
@@ -14,8 +15,41 @@ const services = [
 
 const links = [{ href: "/blog", label: "Blog" }];
 
+function NavLink({
+  href,
+  label,
+  isActive,
+  accent,
+  onClick,
+}: {
+  href: string;
+  label: string;
+  isActive: boolean;
+  accent?: boolean;
+  onClick?: () => void;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`relative pt-3 pb-2 text-sm font-semibold uppercase tracking-wide transition-colors ${
+        accent || isActive ? "text-brand" : "text-zinc-900 hover:text-brand"
+      }`}
+    >
+      {isActive && (
+        <span className="absolute left-1/2 top-0 h-0.5 w-8 -translate-x-1/2 rounded-full bg-brand" />
+      )}
+      {label}
+    </Link>
+  );
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isBlogActive = pathname === "/blog" || pathname.startsWith("/blog/");
+  const isKontaktActive = pathname === "/kontakt";
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white">
@@ -23,23 +57,20 @@ export default function Navbar() {
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image src="/logo.png" alt="VG Media" width={140} height={34} priority />
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-700 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {services.map((service) => (
-            <Link key={service.href} href={service.href} className="py-2 transition-colors hover:text-brand">
-              {service.label}
-            </Link>
+            <NavLink key={service.href} href={service.href} label={service.label} isActive={pathname === service.href} />
           ))}
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="transition-colors hover:text-brand">
-              {link.label}
-            </Link>
+            <NavLink key={link.href} href={link.href} label={link.label} isActive={isBlogActive} />
           ))}
+          <NavLink href="/kontakt#form" label="Kontakt" isActive={isKontaktActive} accent />
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:hidden">
           <Link
             href="/kontakt#form"
             onClick={() => setOpen(false)}
-            className="rounded-full bg-brand px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
+            className="text-sm font-semibold uppercase tracking-wide text-brand transition-colors hover:text-brand-dark"
           >
             Kontakt
           </Link>
@@ -48,7 +79,7 @@ export default function Navbar() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-label={open ? "Zavřít menu" : "Otevřít menu"}
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-700 transition-colors hover:text-brand lg:hidden"
+            className="ml-2 flex h-9 w-9 items-center justify-center rounded-lg text-zinc-700 transition-colors hover:text-brand"
           >
             {open ? (
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
