@@ -8,24 +8,18 @@ export const metadata: Metadata = {
   description: "Tipy, novinky a know-how ze světa performance marketingu a AI reklamy.",
 };
 
-function getGridClass(count: number) {
-  if (count === 1) return "mx-auto grid max-w-2xl grid-cols-1 gap-10";
-  if (count === 2) return "mx-auto grid max-w-4xl grid-cols-1 gap-10 sm:grid-cols-2";
-  return "grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3";
-}
-
 export default function BlogPage() {
   return (
     <div>
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className={getGridClass(articles.length)}>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Link
               key={article.id}
               href={`/blog/${article.id}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 transition-shadow hover:shadow-lg"
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-brand to-brand-dark">
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-gradient-to-br from-brand to-brand-dark">
                 {article.image ? (
                   <Image
                     src={article.image}

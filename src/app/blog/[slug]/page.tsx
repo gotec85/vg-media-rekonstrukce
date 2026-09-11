@@ -46,7 +46,7 @@ export default async function BlogArticlePage({ params }: Props) {
       <p className="mt-6 text-lg leading-8 text-zinc-600">{article.excerpt}</p>
 
       {article.image && (
-        <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-zinc-100">
+        <div className="relative mt-10 aspect-[3/4] w-full max-w-md overflow-hidden rounded-3xl bg-zinc-100 sm:mx-auto">
           <Image
             src={article.image}
             alt={article.imageAlt ?? article.title}
