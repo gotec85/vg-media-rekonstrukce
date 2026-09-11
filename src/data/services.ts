@@ -14,11 +14,12 @@ export type Offering = {
   id: string;
   title: string;
   description: string;
-  price: string;
+  price?: string;
   priceUnit?: string;
   icon: "search" | "chart" | "user";
   moreInfoHref?: string;
   moreInfoLabel?: string;
+  images?: string[];
 };
 
 export const services: Service[] = [
@@ -92,6 +93,42 @@ export const services: Service[] = [
       "Reklamní video kreativy a bannerová grafika vytvořené pomocí AI nástrojů, rychleji a levněji než klasická produkce.",
     description:
       "Reklamní video kreativy i display a bannerová grafika napříč reklamními sítěmi, vytvořené pomocí AI nástrojů. Rychlejší a levnější než klasická produkce, navazující na vizuální styl vaší značky a ideální na rychlé testování konceptů.",
+    offerings: [
+      {
+        id: "produktove-fotky",
+        title: "Produktové fotky",
+        description:
+          "AI vygenerované produktové fotky pro e-shop i sociální sítě – čisté packshoty i fotky v kontextu použití, bez nutnosti klasického fotostudia.",
+        icon: "search",
+        images: [
+          "/sluzby/produktove-fotky/apex-nutrition-studio.jpg",
+          "/sluzby/produktove-fotky/apex-nutrition-splash.jpg",
+          "/sluzby/produktove-fotky/aurelia-mineral-glow-serum.jpg",
+          "/sluzby/produktove-fotky/white-chocolate-protein.jpg",
+        ],
+      },
+      {
+        id: "bannery",
+        title: "Bannery",
+        description:
+          "Statická bannerová reklamní grafika napříč display sítěmi ve všech potřebných rozměrech a formátech, navazující na vizuální styl vaší značky.",
+        icon: "chart",
+      },
+      {
+        id: "video-bannery",
+        title: "Video bannery",
+        description:
+          "Krátké animované bannery a video reklamy do display a bannerových sítí, které upoutají pozornost víc než statická grafika.",
+        icon: "chart",
+      },
+      {
+        id: "ai-video",
+        title: "AI video",
+        description:
+          "Reklamní videokreativy vytvořené pomocí AI nástrojů – rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
+        icon: "user",
+      },
+    ],
   },
   {
     id: "reklama-v-ai-chatech",

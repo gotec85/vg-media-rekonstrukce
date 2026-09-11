@@ -110,9 +110,28 @@ export default async function ServicePage({ params }: Props) {
                   </Link>
                 )}
 
+                {offering.images && offering.images.length > 0 && (
+                  <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    {offering.images.map((image) => (
+                      <div
+                        key={image}
+                        className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-100"
+                      >
+                        <Image
+                          src={image}
+                          alt={offering.title}
+                          fill
+                          sizes="(min-width: 640px) 25vw, 50vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-2xl font-bold text-zinc-900">{offering.price}</p>
+                    <p className="text-2xl font-bold text-zinc-900">{offering.price ?? "Cena na vyžádání"}</p>
                     {offering.priceUnit && <p className="text-sm text-zinc-500">{offering.priceUnit}</p>}
                   </div>
                   <Link
