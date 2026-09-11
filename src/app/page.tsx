@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 
 const clientLogos = [
   { name: "Notificard", src: "/clients/notificard.png", width: 296, height: 176 },
-  { name: "Bezrealitky", src: "/clients/bezrealitky.png", width: 177, height: 42 },
+  { name: "Bezrealitky", src: "/clients/bezrealitky.svg", width: 177, height: 35 },
   { name: "Fakturoid", src: "/clients/fakturoid.png", width: 177, height: 49 },
   { name: "OcniOptik", src: "/clients/ocni-optik.png", width: 167, height: 51 },
   { name: "MM.", src: "/clients/mm.png", width: 68, height: 30 },
@@ -20,7 +20,7 @@ const clientLogos = [
   { name: "Gom Production", src: "/clients/gom-production.png", width: 158, height: 46 },
   { name: "Eco Vehicle", src: "/clients/eco-vehicle.png", width: 134, height: 46 },
   { name: "Eco Servis", src: "/clients/eco-servis.png", width: 99, height: 93 },
-  { name: "Finex", src: "/clients/finex.png", width: 127, height: 40 },
+  { name: "Finex", src: "/clients/finex.svg", width: 127, height: 34 },
 ];
 
 const clientLogosRow1 = clientLogos.slice(0, 9);
