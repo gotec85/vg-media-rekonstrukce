@@ -14,7 +14,7 @@ const clientLogos = [
   { name: "Elementary POS", src: "/clients/elementary-pos.png", width: 308, height: 44 },
   { name: "Bezmakleri", src: "/clients/bezmakleri.png", width: 83, height: 66 },
   { name: "Sauna Project", src: "/clients/sauna-project.png", width: 116, height: 28 },
-  { name: "Automycka MYJE.TO", src: "/clients/automycka-myje-to.png", width: 268, height: 32 },
+  { name: "Automycka MYJE.TO", src: "/clients/myje-to.svg", width: 268, height: 34 },
   { name: "App Wizard", src: "/clients/app-wizard.png", width: 217, height: 56 },
   { name: "Fotoeshop", src: "/clients/fotoeshop.png", width: 381, height: 72 },
   { name: "Gom Production", src: "/clients/gom-production.png", width: 158, height: 46 },
