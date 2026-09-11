@@ -73,6 +73,19 @@ export default async function BlogArticlePage({ params }: Props) {
           </section>
         ))}
       </div>
+
+      <div className="mt-16 rounded-2xl bg-zinc-50 p-8 text-center sm:p-10">
+        <h2 className="text-xl font-bold text-zinc-900 sm:text-2xl">Chcete podobnou reklamu i pro svůj byznys?</h2>
+        <p className="mt-3 text-zinc-600">
+          Ozvěte se nám, probereme, jestli by tenhle kanál dával smysl i vám a jak by mohla spolupráce vypadat.
+        </p>
+        <Link
+          href="/kontakt#form"
+          className="mt-6 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+        >
+          Kontaktujte nás
+        </Link>
+      </div>
     </div>
   );
 }
