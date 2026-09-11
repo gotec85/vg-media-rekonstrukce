@@ -101,6 +101,15 @@ export default async function ServicePage({ params }: Props) {
                 </div>
                 <p className="mt-4 text-base leading-7 text-zinc-600">{offering.description}</p>
 
+                {offering.moreInfoHref && (
+                  <Link
+                    href={offering.moreInfoHref}
+                    className="mt-3 inline-block text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
+                  >
+                    {offering.moreInfoLabel ?? "Více informací najdete zde"} →
+                  </Link>
+                )}
+
                 <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-2xl font-bold text-zinc-900">{offering.price}</p>

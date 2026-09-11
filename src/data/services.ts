@@ -17,6 +17,8 @@ export type Offering = {
   price: string;
   priceUnit?: string;
   icon: "search" | "chart" | "user";
+  moreInfoHref?: string;
+  moreInfoLabel?: string;
 };
 
 export const services: Service[] = [
@@ -115,6 +117,8 @@ export const services: Service[] = [
           "Založíme váš účet v ChatGPT Ads Manageru, zvolíme správný cíl kampaně (CPM, CPC nebo oCPC) a popíšeme váš produkt přesně podle doporučení OpenAI. Připravíme kreativu ve formátu, který tenhle kanál vyžaduje, nastavíme rozpočet i měření výsledků, abyste hned viděli, jestli a jak kanál funguje.",
         price: "od 4 900 Kč",
         icon: "search",
+        moreInfoHref: "/blog/chatgpt-ads",
+        moreInfoLabel: "Více informací o ChatGPT Ads najdete zde",
       },
     ],
   },

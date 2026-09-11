@@ -6,6 +6,8 @@ export type ArticleSection = {
 export type Article = {
   id: string;
   title: string;
+  category: string;
+  date: string;
   excerpt: string;
   sections: ArticleSection[];
 };
@@ -14,6 +16,8 @@ export const articles: Article[] = [
   {
     id: "chatgpt-ads",
     title: "ChatGPT Ads v Česku: jak funguje reklama v umělé inteligenci a proč ji zkusit",
+    category: "AI reklama",
+    date: "11. 9. 2026",
     excerpt:
       "Po Googlu, Facebooku a Instagramu přibyl nový reklamní kanál – ChatGPT. Vysvětlujeme srozumitelně, jak reklama v AI chatu funguje, komu se vůbec zobrazí a proč může dávat smysl zkusit ji jako jedni z prvních.",
     sections: [
