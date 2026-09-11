@@ -104,8 +104,18 @@ export const services: Service[] = [
     shortDescription:
       "Nová disciplína, se kterou jsme mezi prvními na trhu, reklama tam, kde lidé hledají odpovědi přes AI.",
     description:
-      "Nová disciplína, reklama v prostředí AI chatbotů a AI vyhledávání. Jsme mezi prvními agenturami v Česku, které tohle klientům nabízí.",
+      "ChatGPT Ads je nový reklamní kanál od OpenAI, který se od srpna 2026 spustil i v Česku. Reklama se zobrazuje pod odpověďmi v ChatGPT, a to jen uživatelům plánů Free a Go – lidem na placených plánech (Plus, Pro, Business, Enterprise, Edu) se nezobrazí nikdy. Formát je jednoduchý a přísně daný: krátký název produktu, jedna věta popisku a jedna čistá fotka bez textu a loga. Kampaň lze cílit na CPM (zásah), CPC (proklik) nebo oCPC (proklik s vyšší šancí na konverzi) podle toho, v jaké fázi rozhodování se vaše cílovka nachází. Reklama se nezobrazuje u citlivých témat, u nezletilých účtů ani v dočasném chatu a v Evropě zatím funguje bez agresivní personalizace na základě historie konverzací. Jsme mezi prvními agenturami v Česku, které tuhle disciplínu klientům nabízí – víme, jak kampaň správně nastavit a jak popsat produkt přesně podle doporučení OpenAI, aby reklama padla ve chvíli, kdy o něm lidé v ChatGPT skutečně přemýšlí.",
     highlight: true,
     isNew: true,
+    offerings: [
+      {
+        id: "nastaveni-kampane",
+        title: "Nastavení ChatGPT Ads kampaně",
+        description:
+          "Založíme váš účet v ChatGPT Ads Manageru, zvolíme správný cíl kampaně (CPM, CPC nebo oCPC) a popíšeme váš produkt přesně podle doporučení OpenAI. Připravíme kreativu ve formátu, který tenhle kanál vyžaduje, nastavíme rozpočet i měření výsledků, abyste hned viděli, jestli a jak kanál funguje.",
+        price: "od 4 900 Kč",
+        icon: "search",
+      },
+    ],
   },
 ];
