@@ -7,7 +7,7 @@ const clientLogos = [
   { name: "Bezrealitky", src: "/clients/bezrealitky.svg", width: 177, height: 35 },
   { name: "Fakturoid", src: "/clients/fakturoid.png", width: 177, height: 49 },
   { name: "OcniOptik", src: "/clients/ocni-optik.png", width: 167, height: 51 },
-  { name: "MM.", src: "/clients/mm.png", width: 68, height: 30 },
+  { name: "MM.", src: "/clients/mm.svg", width: 80, height: 30 },
   { name: "Kryjeme vam zada", src: "/clients/kryjeme-vam-zada.png", width: 240, height: 35 },
   { name: "Lovato Electric", src: "/clients/lovato-electric.png", width: 222, height: 90 },
   { name: "Legistes", src: "/clients/legistes.png", width: 216, height: 56 },
