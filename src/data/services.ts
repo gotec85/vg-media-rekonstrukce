@@ -81,15 +81,6 @@ export const services: Service[] = [
         priceUnit: "měsíčně",
         icon: "chart",
       },
-      {
-        id: "skoleni",
-        title: "Google školení",
-        description:
-          "Chcete si kampaně řídit sami nebo se v nich lépe orientovat? Připravíme školení šité na míru vašemu byznysu, srozumitelné i bez předchozích zkušeností s Google Ads.",
-        price: "od 1 900 Kč",
-        priceUnit: "za hodinu",
-        icon: "user",
-      },
     ],
   },
   {
