@@ -55,7 +55,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image src="/logo.png" alt="VG Media" width={140} height={34} priority />
         </Link>
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-12 lg:flex">
           {services.map((service) => (
             <NavLink key={service.href} href={service.href} label={service.label} isActive={pathname === service.href} />
           ))}
