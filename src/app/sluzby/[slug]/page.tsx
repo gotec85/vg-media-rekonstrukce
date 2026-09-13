@@ -123,7 +123,7 @@ export default async function ServicePage({ params }: Props) {
                             alt={offering.title}
                             fill
                             sizes="200px"
-                            className="object-cover"
+                            className="object-contain"
                           />
                         </div>
                       ))}
@@ -133,7 +133,7 @@ export default async function ServicePage({ params }: Props) {
 
                 <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-2xl font-bold text-zinc-900">{offering.price ?? "Cena na vyžádání"}</p>
+                    <p className="text-2xl font-bold text-zinc-900">{offering.price ?? "Individuální nabídka"}</p>
                     {offering.priceUnit && <p className="text-sm text-zinc-500">{offering.priceUnit}</p>}
                   </div>
                   <Link
