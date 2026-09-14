@@ -134,21 +134,40 @@ export default async function ServicePage({ params }: Props) {
                   </div>
                 )}
 
-                <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-6 sm:flex-row sm:items-center sm:justify-between">
-                  <div>
-                    <p className="text-2xl font-bold text-zinc-900">{offering.price ?? "Individuální nabídka"}</p>
-                    {offering.priceUnit && <p className="text-sm text-zinc-500">{offering.priceUnit}</p>}
+                {offering.price && (
+                  <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-6 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <p className="text-2xl font-bold text-zinc-900">{offering.price}</p>
+                      {offering.priceUnit && <p className="text-sm text-zinc-500">{offering.priceUnit}</p>}
+                    </div>
+                    <Link
+                      href="/kontakt#form"
+                      className="inline-block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+                    >
+                      Mám zájem
+                    </Link>
                   </div>
-                  <Link
-                    href="/kontakt#form"
-                    className="inline-block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-                  >
-                    Mám zájem
-                  </Link>
-                </div>
+                )}
               </section>
             ))}
           </div>
+
+          {service.offerings!.some((offering) => !offering.price) && (
+            <div className="mt-14 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-8 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+              <div>
+                <p className="text-lg font-bold text-zinc-900">Individuální nabídka</p>
+                <p className="mt-1 text-sm text-zinc-600">
+                  Máte zájem o některou z těchto služeb? Ozvěte se, probereme rozsah a cenu na míru.
+                </p>
+              </div>
+              <Link
+                href="/kontakt#form"
+                className="inline-block flex-shrink-0 rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+              >
+                Mám zájem
+              </Link>
+            </div>
+          )}
         </>
       ) : (
         <div className="mt-14 rounded-2xl border border-zinc-200 p-8 text-center">
