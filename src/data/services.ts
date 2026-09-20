@@ -22,6 +22,7 @@ export type Offering = {
   images?: string[];
   videoUrl?: string;
   videos?: string[];
+  videoAspect?: "9/16" | "4/5" | "1/1" | "16/9";
 };
 
 export const services: Service[] = [
@@ -143,6 +144,7 @@ export const services: Service[] = [
           "/sluzby/video-bannery/ai-video-banner-5.mp4",
           "/sluzby/video-bannery/ai-video-banner-6.mp4",
         ],
+        videoAspect: "4/5",
       },
       {
         id: "ai-video",

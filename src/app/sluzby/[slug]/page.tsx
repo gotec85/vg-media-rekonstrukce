@@ -113,10 +113,11 @@ export default async function ServicePage({ params }: Props) {
                 {offering.videos && offering.videos.length > 0 && (
                   <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
                     {offering.videos.map((src, i) => (
-                      <div key={i} className="overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
+                      <div key={i} className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                         <video
                           src={src}
-                          className="aspect-[9/16] w-full object-cover"
+                          style={{ aspectRatio: offering.videoAspect ?? "9/16" }}
+                          className="w-full object-contain"
                           autoPlay
                           muted
                           loop
