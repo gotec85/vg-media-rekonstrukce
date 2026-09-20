@@ -111,11 +111,11 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.videos && offering.videos.length > 0 && (
-                  <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                    {offering.videos.map((src, i) => (
-                      <div key={i} className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
+                  offering.videos.length === 1 ? (
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                         <video
-                          src={src}
+                          src={offering.videos[0]}
                           style={{ aspectRatio: offering.videoAspect ?? "9/16" }}
                           className="w-full object-contain"
                           autoPlay
@@ -124,8 +124,24 @@ export default async function ServicePage({ params }: Props) {
                           playsInline
                         />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ) : (
+                    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                      {offering.videos.map((src, i) => (
+                        <div key={i} className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
+                          <video
+                            src={src}
+                            style={{ aspectRatio: offering.videoAspect ?? "9/16" }}
+                            className="w-full object-contain"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )
                 )}
 
                 {offering.videoUrl && (
