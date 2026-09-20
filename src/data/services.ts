@@ -105,6 +105,11 @@ export const services: Service[] = [
           "/sluzby/produktove-fotky/apex-nutrition-splash.jpg",
           "/sluzby/produktove-fotky/aurelia-mineral-glow-serum.jpg",
           "/sluzby/produktove-fotky/white-chocolate-protein.jpg",
+          "/sluzby/produktove-fotky/wilson-optix-na-kurtu.png",
+          "/sluzby/produktove-fotky/wilson-optix-studio-dark.png",
+          "/sluzby/produktove-fotky/wilson-optix-sikmo.webp",
+          "/sluzby/produktove-fotky/wilson-optix-front.webp",
+          "/sluzby/produktove-fotky/wilson-optix-akce-mice.png",
         ],
       },
       {
