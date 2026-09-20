@@ -111,13 +111,36 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.videos && offering.videos.length > 0 && (
-                  offering.videos.length === 1 ? (
+                  offering.videos.length === 1 && offering.videoUrl ? (
+                    <div className="mt-6 grid grid-cols-2 gap-3">
+                      <div className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
+                        <video
+                          src={offering.videos[0]}
+                          className="w-full"
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        />
+                      </div>
+                      <div className="overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
+                        <div className="relative aspect-[9/16] w-full">
+                          <iframe
+                            src={offering.videoUrl}
+                            className="absolute inset-0 h-full w-full"
+                            allow="autoplay"
+                            allowFullScreen
+                            title={offering.title}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : offering.videos.length === 1 ? (
                     <div className="mt-6 flex justify-center">
                       <div className="w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                         <video
                           src={offering.videos[0]}
-                          style={{ aspectRatio: offering.videoAspect ?? "9/16" }}
-                          className="w-full object-contain"
+                          className="w-full"
                           autoPlay
                           muted
                           loop
@@ -143,7 +166,7 @@ export default async function ServicePage({ params }: Props) {
                   )
                 )}
 
-                {offering.videoUrl && (
+                {offering.videoUrl && !(offering.videos && offering.videos.length === 1) && (
                   <div className="mt-6 flex justify-center">
                     <div className="relative aspect-[9/16] w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
                       <iframe
