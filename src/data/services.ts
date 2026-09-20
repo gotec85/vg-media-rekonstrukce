@@ -20,6 +20,7 @@ export type Offering = {
   moreInfoHref?: string;
   moreInfoLabel?: string;
   images?: string[];
+  videoUrl?: string;
 };
 
 export const services: Service[] = [
@@ -132,6 +133,7 @@ export const services: Service[] = [
         description:
           "Reklamní videokreativy vytvořené pomocí AI nástrojů – rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
         icon: "user",
+        videoUrl: "https://drive.google.com/file/d/1E58tkM3rjJja2ENzX3vmbZpxhetFl0h6/preview",
       },
     ],
   },

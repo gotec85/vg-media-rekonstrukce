@@ -110,6 +110,20 @@ export default async function ServicePage({ params }: Props) {
                   </Link>
                 )}
 
+                {offering.videoUrl && (
+                  <div className="mt-6 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
+                    <div className="relative aspect-video w-full">
+                      <iframe
+                        src={offering.videoUrl}
+                        className="absolute inset-0 h-full w-full"
+                        allow="autoplay"
+                        allowFullScreen
+                        title={offering.title}
+                      />
+                    </div>
+                  </div>
+                )}
+
                 {offering.images && offering.images.length > 0 && (
                   <div className="marquee-fade relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-x-hidden overflow-y-visible py-3">
                     <div className="animate-marquee-slow flex w-max items-center gap-4 px-6 hover:[animation-play-state:paused] sm:gap-6">
