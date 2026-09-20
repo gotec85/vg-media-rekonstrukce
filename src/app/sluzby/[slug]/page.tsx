@@ -149,9 +149,9 @@ export default async function ServicePage({ params }: Props) {
                       </div>
                     </div>
                   ) : (
-                    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    <div className="mt-6 columns-2 gap-3 space-y-3 sm:columns-3">
                       {offering.videos.map((src, i) => (
-                        <div key={i} className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
+                        <div key={i} className="break-inside-avoid overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                           <video
                             src={src}
                             className="w-full"
