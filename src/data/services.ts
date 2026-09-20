@@ -119,6 +119,14 @@ export const services: Service[] = [
         description:
           "Statická bannerová reklamní grafika napříč display sítěmi ve všech potřebných rozměrech a formátech, navazující na vizuální styl vaší značky.",
         icon: "chart",
+        images: [
+          "/sluzby/bannery/petgourmet-dovolena-bez-obav.png",
+          "/sluzby/bannery/petgourmet-pripraveni-na-dobrodruzstvi.png",
+          "/sluzby/bannery/amalka-a-tonik-panenky.png",
+          "/sluzby/bannery/menforsan-sleva-15.jpg",
+          "/sluzby/bannery/petgourmet-probiotics-sleva-83-v1.jpg",
+          "/sluzby/bannery/petgourmet-probiotics-sleva-83-v2.jpg",
+        ],
       },
       {
         id: "video-bannery",
