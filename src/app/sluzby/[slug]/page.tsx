@@ -111,8 +111,8 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.videoUrl && (
-                  <div className="mt-6 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
-                    <div className="relative aspect-video w-full">
+                  <div className="mt-6 flex justify-center">
+                    <div className="relative aspect-[9/16] w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
                       <iframe
                         src={offering.videoUrl}
                         className="absolute inset-0 h-full w-full"
