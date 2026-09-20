@@ -21,6 +21,7 @@ export type Offering = {
   moreInfoLabel?: string;
   images?: string[];
   videoUrl?: string;
+  videos?: string[];
 };
 
 export const services: Service[] = [
@@ -134,6 +135,14 @@ export const services: Service[] = [
         description:
           "Krátké animované bannery a video reklamy do display a bannerových sítí, které upoutají pozornost víc než statická grafika.",
         icon: "chart",
+        videos: [
+          "/sluzby/video-bannery/ai-video-banner-1.mp4",
+          "/sluzby/video-bannery/ai-video-banner-2.mp4",
+          "/sluzby/video-bannery/ai-video-banner-3.mp4",
+          "/sluzby/video-bannery/ai-video-banner-4.mp4",
+          "/sluzby/video-bannery/ai-video-banner-5.mp4",
+          "/sluzby/video-bannery/ai-video-banner-6.mp4",
+        ],
       },
       {
         id: "ai-video",

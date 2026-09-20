@@ -110,6 +110,23 @@ export default async function ServicePage({ params }: Props) {
                   </Link>
                 )}
 
+                {offering.videos && offering.videos.length > 0 && (
+                  <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    {offering.videos.map((src, i) => (
+                      <div key={i} className="overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
+                        <video
+                          src={src}
+                          className="aspect-[9/16] w-full object-cover"
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {offering.videoUrl && (
                   <div className="mt-6 flex justify-center">
                     <div className="relative aspect-[9/16] w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
