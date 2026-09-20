@@ -131,8 +131,7 @@ export default async function ServicePage({ params }: Props) {
                         <div key={i} className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                           <video
                             src={src}
-                            style={{ aspectRatio: offering.videoAspect ?? "9/16" }}
-                            className="w-full object-contain"
+                            className="w-full"
                             autoPlay
                             muted
                             loop
