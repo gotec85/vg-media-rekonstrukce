@@ -29,8 +29,7 @@ export default function VideoGrid({ videos }: Props) {
         {groups.map((group) => (
           <div
             key={group.aspect}
-            className={`grid gap-3 grid-cols-${Math.min(group.items.length, MAX_COLS)}`}
-            style={{ gridTemplateColumns: `repeat(${Math.min(group.items.length, MAX_COLS)}, minmax(0, ${100 / MAX_COLS}%))` }}
+            className="grid grid-cols-4 gap-3"
           >
             {group.items.map((v, i) => (
               <div
