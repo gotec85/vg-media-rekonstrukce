@@ -22,7 +22,7 @@ export default function ImageMarquee({ images, alt }: Props) {
               key={`${image}-${index}`}
               onMouseEnter={() => setLightbox(image)}
               onMouseLeave={() => setLightbox(null)}
-              className="relative aspect-square w-36 flex-shrink-0 cursor-zoom-in overflow-hidden rounded-2xl bg-zinc-100 shadow-sm transition-transform duration-300 ease-out hover:z-20 hover:scale-110 hover:shadow-2xl sm:w-48"
+              className="relative aspect-square w-36 flex-shrink-0 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm transition-transform duration-300 ease-out hover:z-20 hover:scale-110 hover:shadow-2xl sm:w-48"
             >
               <Image
                 src={image}
