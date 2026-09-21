@@ -115,6 +115,7 @@ export const services: Service[] = [
           "/sluzby/produktove-fotky/wilson-optix-front.webp",
           "/sluzby/produktove-fotky/wilson-optix-akce-mice.png",
           "/sluzby/produktove-fotky/wilson-optix-selfie-na-kurtu.webp",
+          "/sluzby/produktove-fotky/asics-padel-shoe-pink.webp",
         ],
       },
       {
