@@ -7,12 +7,7 @@ type Props = {
   videos: VideoItem[];
 };
 
-const colsForCount: Record<number, string> = {
-  1: "grid-cols-1",
-  2: "grid-cols-2",
-  3: "grid-cols-3",
-  4: "grid-cols-4",
-};
+const MAX_COLS = 4;
 
 export default function VideoGrid({ videos }: Props) {
   const [preview, setPreview] = useState<VideoItem | null>(null);
@@ -34,7 +29,8 @@ export default function VideoGrid({ videos }: Props) {
         {groups.map((group) => (
           <div
             key={group.aspect}
-            className={`grid gap-3 ${colsForCount[group.items.length] ?? "grid-cols-3"}`}
+            className={`grid gap-3 grid-cols-${Math.min(group.items.length, MAX_COLS)}`}
+            style={{ gridTemplateColumns: `repeat(${Math.min(group.items.length, MAX_COLS)}, minmax(0, ${100 / MAX_COLS}%))` }}
           >
             {group.items.map((v, i) => (
               <div
