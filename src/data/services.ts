@@ -158,6 +158,7 @@ export const services: Service[] = [
           "Reklamní videokreativy vytvořené pomocí AI nástrojů – rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
         icon: "user",
         videos: [
+          { src: "/sluzby/ai-video/padel.mp4", aspect: "9/16" },
           { src: "/sluzby/ai-video/airforce-09.mp4", aspect: "9/16" },
         ],
         videoUrl: "https://drive.google.com/file/d/1E58tkM3rjJja2ENzX3vmbZpxhetFl0h6/preview",
