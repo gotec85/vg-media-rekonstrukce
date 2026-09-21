@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { VideoItem } from "@/data/services";
 
 type Props = {
@@ -10,7 +10,21 @@ type Props = {
 
 export default function VideoGrid({ videos, extraIframe }: Props) {
   const [preview, setPreview] = useState<VideoItem | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  // useEffect runs after React commits to DOM, so it overrides React's muted prop
+  useEffect(() => {
+    videoRefs.current.forEach((vid, i) => {
+      if (!vid) return;
+      if (i === hoveredIndex) {
+        vid.volume = 1;
+        vid.muted = false;
+      } else {
+        vid.muted = true;
+      }
+    });
+  }, [hoveredIndex]);
 
   const totalItems = videos.length + (extraIframe ? 1 : 0);
   const colsClass =
@@ -26,18 +40,11 @@ export default function VideoGrid({ videos, extraIframe }: Props) {
             className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
             onMouseEnter={() => {
               setPreview(v);
-              const vid = videoRefs.current[i];
-              if (vid) {
-                vid.muted = false;
-                vid.play().catch(() => {
-                  vid.muted = true;
-                });
-              }
+              setHoveredIndex(i);
             }}
             onMouseLeave={() => {
               setPreview(null);
-              const vid = videoRefs.current[i];
-              if (vid) vid.muted = true;
+              setHoveredIndex(null);
             }}
           >
             <video
