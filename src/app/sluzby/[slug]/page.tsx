@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services, type Offering } from "@/data/services";
+import ImageMarquee from "@/components/ImageMarquee";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -181,27 +182,7 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.images && offering.images.length > 0 && (
-                  <div className="marquee-fade relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-x-hidden overflow-y-visible py-3">
-                    <div className="animate-marquee-slow flex w-max items-center gap-4 px-6 hover:[animation-play-state:paused] sm:gap-6">
-                      {(() => {
-                        const repeated = Array(3).fill(offering.images).flat();
-                        return [...repeated, ...repeated].map((image, index) => (
-                          <div
-                            key={`${image}-${index}`}
-                            className="relative aspect-square w-36 flex-shrink-0 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm transition-transform duration-300 ease-out hover:z-20 hover:scale-125 hover:shadow-2xl sm:w-48"
-                          >
-                            <Image
-                              src={image}
-                              alt={offering.title}
-                              fill
-                              sizes="200px"
-                              className="object-contain"
-                            />
-                          </div>
-                        ));
-                      })()}
-                    </div>
-                  </div>
+                  <ImageMarquee images={offering.images} alt={offering.title} />
                 )}
 
                 {offering.price && (
