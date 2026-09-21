@@ -1,27 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import type { VideoItem } from "@/data/services";
 
 type Props = {
   videos: VideoItem[];
+  extraIframe?: { src: string; aspect: string };
 };
 
-export default function VideoGrid({ videos }: Props) {
+export default function VideoGrid({ videos, extraIframe }: Props) {
   const [preview, setPreview] = useState<VideoItem | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const totalItems = videos.length + (extraIframe ? 1 : 0);
+  const colsClass =
+    totalItems <= 2 ? "grid-cols-2" : totalItems === 3 ? "grid-cols-3" : "grid-cols-4";
 
   return (
     <>
-      <div className="mt-6 grid grid-cols-4 gap-3">
+      <div className={`mt-6 grid ${colsClass} gap-3`}>
         {videos.map((v, i) => (
           <div
             key={i}
             style={{ aspectRatio: v.aspect }}
             className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
-            onMouseEnter={() => setPreview(v)}
-            onMouseLeave={() => setPreview(null)}
+            onMouseEnter={() => {
+              setPreview(v);
+              const vid = videoRefs.current[i];
+              if (vid) vid.muted = false;
+            }}
+            onMouseLeave={() => {
+              setPreview(null);
+              const vid = videoRefs.current[i];
+              if (vid) vid.muted = true;
+            }}
           >
             <video
+              ref={(el) => {
+                videoRefs.current[i] = el;
+              }}
               src={v.src}
               className="w-full h-full object-contain"
               autoPlay
@@ -31,6 +48,20 @@ export default function VideoGrid({ videos }: Props) {
             />
           </div>
         ))}
+        {extraIframe && (
+          <div
+            style={{ aspectRatio: extraIframe.aspect }}
+            className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm"
+          >
+            <iframe
+              src={extraIframe.src}
+              className="w-full h-full"
+              allow="autoplay"
+              allowFullScreen
+              title="AI video ukázka"
+            />
+          </div>
+        )}
       </div>
 
       {preview && (

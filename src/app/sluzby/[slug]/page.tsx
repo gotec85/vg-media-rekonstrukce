@@ -153,11 +153,18 @@ export default async function ServicePage({ params }: Props) {
                       </div>
                     </div>
                   ) : (
-                    <VideoGrid videos={offering.videos} />
+                    <VideoGrid
+                      videos={offering.videos}
+                      extraIframe={
+                        offering.videoUrl
+                          ? { src: offering.videoUrl, aspect: "9/16" }
+                          : undefined
+                      }
+                    />
                   )
                 )}
 
-                {offering.videoUrl && !(offering.videos && offering.videos.length === 1) && (
+                {offering.videoUrl && !offering.videos?.length && (
                   <div className="mt-6 flex justify-center">
                     <div className="relative aspect-[9/16] w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-100 shadow-sm">
                       <iframe
