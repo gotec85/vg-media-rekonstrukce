@@ -128,6 +128,11 @@ export const services: Service[] = [
           "/sluzby/bannery/menforsan-sleva-15.jpg",
           "/sluzby/bannery/petgourmet-probiotics-sleva-83-v1.jpg",
           "/sluzby/bannery/petgourmet-probiotics-sleva-83-v2.jpg",
+          "/sluzby/bannery/dolnik-zradci-krb.png",
+          "/sluzby/bannery/dolnik-zradci-les.png",
+          "/sluzby/bannery/uz-letim-plaz-bryle.png",
+          "/sluzby/bannery/uz-letim-plaz-steny.png",
+          "/sluzby/bannery/uz-letim-vrtulnik.png",
         ],
       },
       {
