@@ -16,14 +16,14 @@ export default function VideoGrid({ videos }: Props) {
         {videos.map((v, i) => (
           <div
             key={i}
+            style={{ aspectRatio: v.aspect }}
             className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
             onMouseEnter={() => setPreview(v)}
             onMouseLeave={() => setPreview(null)}
           >
             <video
               src={v.src}
-              style={{ aspectRatio: v.aspect }}
-              className="w-full object-cover"
+              className="w-full h-full object-contain"
               autoPlay
               muted
               loop
