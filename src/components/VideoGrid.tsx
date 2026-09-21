@@ -5,36 +5,26 @@ import type { VideoItem } from "@/data/services";
 
 type Props = {
   videos: VideoItem[];
-  extraIframe?: { src: string; aspect: string };
 };
 
-export default function VideoGrid({ videos, extraIframe }: Props) {
+export default function VideoGrid({ videos }: Props) {
   const [preview, setPreview] = useState<VideoItem | null>(null);
   const gridVideoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const hoveredIndexRef = useRef<number | null>(null);
 
   function showPreview(v: VideoItem, i: number) {
-    // pause grid video so it doesn't play in background
-    const gridVid = gridVideoRefs.current[i];
-    if (gridVid) gridVid.pause();
+    gridVideoRefs.current.forEach((vid) => vid?.pause());
     hoveredIndexRef.current = i;
     setPreview(v);
   }
 
   function hidePreview() {
-    // resume grid video
-    const i = hoveredIndexRef.current;
-    if (i !== null) {
-      const gridVid = gridVideoRefs.current[i];
-      if (gridVid) gridVid.play().catch(() => {});
-    }
+    gridVideoRefs.current.forEach((vid) => vid?.play().catch(() => {}));
     hoveredIndexRef.current = null;
     setPreview(null);
   }
 
-  const totalItems = videos.length + (extraIframe ? 1 : 0);
-  const colsClass =
-    totalItems <= 2 ? "grid-cols-2" : totalItems === 3 ? "grid-cols-3" : "grid-cols-4";
+  const colsClass = videos.length <= 2 ? "grid-cols-2" : videos.length === 3 ? "grid-cols-3" : "grid-cols-4";
 
   return (
     <>
@@ -60,26 +50,10 @@ export default function VideoGrid({ videos, extraIframe }: Props) {
             />
           </div>
         ))}
-        {extraIframe && (
-          <div
-            style={{ aspectRatio: extraIframe.aspect }}
-            className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm"
-          >
-            <iframe
-              src={extraIframe.src}
-              className="w-full h-full"
-              allow="autoplay"
-              allowFullScreen
-              title="AI video ukázka"
-            />
-          </div>
-        )}
       </div>
 
       {preview && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none bg-black/70">
           <div className="relative max-h-[90vh] max-w-sm w-full drop-shadow-2xl">
             <video
               key={preview.src}
