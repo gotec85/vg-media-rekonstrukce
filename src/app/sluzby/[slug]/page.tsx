@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services, type Offering } from "@/data/services";
 import ImageMarquee from "@/components/ImageMarquee";
+import VideoGrid from "@/components/VideoGrid";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -150,20 +151,7 @@ export default async function ServicePage({ params }: Props) {
                       </div>
                     </div>
                   ) : (
-                    <div className="mt-6 columns-2 gap-3 space-y-3 sm:columns-3">
-                      {offering.videos.map((src, i) => (
-                        <div key={i} className="break-inside-avoid overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
-                          <video
-                            src={src}
-                            className="w-full"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          />
-                        </div>
-                      ))}
-                    </div>
+                    <VideoGrid videos={offering.videos} />
                   )
                 )}
 
