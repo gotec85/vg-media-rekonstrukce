@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import type { VideoItem } from "@/data/services";
 
 type Props = {
@@ -10,21 +10,6 @@ type Props = {
 
 export default function VideoGrid({ videos, extraIframe }: Props) {
   const [preview, setPreview] = useState<VideoItem | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  // useEffect runs after React commits to DOM, so it overrides React's muted prop
-  useEffect(() => {
-    videoRefs.current.forEach((vid, i) => {
-      if (!vid) return;
-      if (i === hoveredIndex) {
-        vid.volume = 1;
-        vid.muted = false;
-      } else {
-        vid.muted = true;
-      }
-    });
-  }, [hoveredIndex]);
 
   const totalItems = videos.length + (extraIframe ? 1 : 0);
   const colsClass =
@@ -38,19 +23,10 @@ export default function VideoGrid({ videos, extraIframe }: Props) {
             key={i}
             style={{ aspectRatio: v.aspect }}
             className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
-            onMouseEnter={() => {
-              setPreview(v);
-              setHoveredIndex(i);
-            }}
-            onMouseLeave={() => {
-              setPreview(null);
-              setHoveredIndex(null);
-            }}
+            onMouseEnter={() => setPreview(v)}
+            onMouseLeave={() => setPreview(null)}
           >
             <video
-              ref={(el) => {
-                videoRefs.current[i] = el;
-              }}
               src={v.src}
               className="w-full h-full object-contain"
               autoPlay
@@ -80,6 +56,17 @@ export default function VideoGrid({ videos, extraIframe }: Props) {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
           <div className="relative max-h-[90vh] max-w-sm w-full drop-shadow-2xl">
             <video
+              key={preview.src}
+              ref={(el) => {
+                if (el) {
+                  el.currentTime = 0;
+                  el.volume = 1;
+                  el.muted = false;
+                  el.play().catch(() => {
+                    el.muted = true;
+                  });
+                }
+              }}
               src={preview.src}
               style={{ aspectRatio: preview.aspect }}
               className="h-auto max-h-[90vh] w-full rounded-2xl object-contain shadow-2xl"
