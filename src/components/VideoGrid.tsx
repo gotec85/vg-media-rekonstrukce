@@ -27,7 +27,12 @@ export default function VideoGrid({ videos, extraIframe }: Props) {
             onMouseEnter={() => {
               setPreview(v);
               const vid = videoRefs.current[i];
-              if (vid) vid.muted = false;
+              if (vid) {
+                vid.muted = false;
+                vid.play().catch(() => {
+                  vid.muted = true;
+                });
+              }
             }}
             onMouseLeave={() => {
               setPreview(null);
