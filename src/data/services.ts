@@ -10,6 +10,8 @@ export type Service = {
   imageAlt?: string;
 };
 
+export type VideoItem = { src: string; aspect: "9/16" | "4/5" | "1/1" | "16/9" };
+
 export type Offering = {
   id: string;
   title: string;
@@ -21,8 +23,7 @@ export type Offering = {
   moreInfoLabel?: string;
   images?: string[];
   videoUrl?: string;
-  videos?: string[];
-  videoAspect?: "9/16" | "4/5" | "1/1" | "16/9";
+  videos?: VideoItem[];
 };
 
 export const services: Service[] = [
@@ -142,14 +143,13 @@ export const services: Service[] = [
           "Krátké animované bannery a video reklamy do display a bannerových sítí, které upoutají pozornost víc než statická grafika.",
         icon: "chart",
         videos: [
-          "/sluzby/video-bannery/ai-video-banner-1.mp4",
-          "/sluzby/video-bannery/ai-video-banner-2.mp4",
-          "/sluzby/video-bannery/ai-video-banner-3.mp4",
-          "/sluzby/video-bannery/ai-video-banner-4.mp4",
-          "/sluzby/video-bannery/ai-video-banner-5.mp4",
-          "/sluzby/video-bannery/ai-video-banner-6.mp4",
+          { src: "/sluzby/video-bannery/ai-video-banner-3.mp4", aspect: "9/16" },
+          { src: "/sluzby/video-bannery/ai-video-banner-4.mp4", aspect: "9/16" },
+          { src: "/sluzby/video-bannery/ai-video-banner-5.mp4", aspect: "9/16" },
+          { src: "/sluzby/video-bannery/ai-video-banner-6.mp4", aspect: "9/16" },
+          { src: "/sluzby/video-bannery/ai-video-banner-1.mp4", aspect: "4/5" },
+          { src: "/sluzby/video-bannery/ai-video-banner-2.mp4", aspect: "1/1" },
         ],
-        videoAspect: "4/5",
       },
       {
         id: "ai-video",
@@ -158,7 +158,7 @@ export const services: Service[] = [
           "Reklamní videokreativy vytvořené pomocí AI nástrojů – rychlejší a levnější produkce než klasické natáčení, ideální na rychlé testování konceptů.",
         icon: "user",
         videos: [
-          "/sluzby/ai-video/airforce-09.mp4",
+          { src: "/sluzby/ai-video/airforce-09.mp4", aspect: "9/16" },
         ],
         videoUrl: "https://drive.google.com/file/d/1E58tkM3rjJja2ENzX3vmbZpxhetFl0h6/preview",
       },

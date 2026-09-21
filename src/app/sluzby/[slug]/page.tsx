@@ -117,8 +117,9 @@ export default async function ServicePage({ params }: Props) {
                     <div className="mt-6 grid grid-cols-2 gap-3">
                       <div className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                         <video
-                          src={offering.videos[0]}
-                          className="w-full"
+                          src={offering.videos[0].src}
+                          style={{ aspectRatio: offering.videos[0].aspect }}
+                          className="w-full object-cover"
                           autoPlay
                           muted
                           loop
@@ -141,8 +142,9 @@ export default async function ServicePage({ params }: Props) {
                     <div className="mt-6 flex justify-center">
                       <div className="w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-900 shadow-sm">
                         <video
-                          src={offering.videos[0]}
-                          className="w-full"
+                          src={offering.videos[0].src}
+                          style={{ aspectRatio: offering.videos[0].aspect }}
+                          className="w-full object-cover"
                           autoPlay
                           muted
                           loop
