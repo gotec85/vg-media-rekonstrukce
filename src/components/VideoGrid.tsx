@@ -11,17 +11,17 @@ export default function VideoGrid({ videos }: Props) {
 
   return (
     <>
-      <div className="mt-6 columns-2 gap-3 space-y-3 sm:columns-3">
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
         {videos.map((src, i) => (
           <div
             key={i}
-            className="break-inside-avoid overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
+            className="overflow-hidden rounded-2xl bg-zinc-900 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl"
             onMouseEnter={() => setPreview(src)}
             onMouseLeave={() => setPreview(null)}
           >
             <video
               src={src}
-              className="w-full"
+              className="w-full h-full object-cover aspect-[4/5]"
               autoPlay
               muted
               loop
