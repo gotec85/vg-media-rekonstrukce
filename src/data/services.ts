@@ -117,6 +117,8 @@ export const services: Service[] = [
           "/sluzby/produktove-fotky/wilson-optix-selfie-na-kurtu.webp",
           "/sluzby/produktove-fotky/asics-padel-shoe-pink.webp",
           "/sluzby/produktove-fotky/asics-padel-shoe-na-kurtu.webp",
+          "/sluzby/produktove-fotky/asics-padel-hrac-pozice.webp",
+          "/sluzby/produktove-fotky/asics-padel-hrac-stoji.webp",
         ],
       },
       {
