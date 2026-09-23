@@ -31,6 +31,15 @@ body {
   }
 }
 
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .animate-marquee {
   animation: marquee 28s linear infinite;
 }
@@ -42,7 +51,7 @@ body {
 }
 
 .animate-marquee-reverse {
-  animation: marquee 28s linear infinite reverse;
+  animation: marquee-right 84s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

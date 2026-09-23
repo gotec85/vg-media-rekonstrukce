@@ -93,7 +93,7 @@ export default async function ServicePage({ params }: Props) {
       {hasOfferings ? (
         <>
           <div className="mt-14 space-y-16">
-            {service.offerings!.map((offering) => (
+            {service.offerings!.map((offering, offeringIndex) => (
               <section key={offering.id} id={offering.id} className="scroll-mt-24">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-brand">
@@ -172,7 +172,7 @@ export default async function ServicePage({ params }: Props) {
                 )}
 
                 {offering.images && offering.images.length > 0 && (
-                  <ImageMarquee images={offering.images} alt={offering.title} />
+                  <ImageMarquee images={offering.images} alt={offering.title} reverse={offeringIndex % 2 === 1} />
                 )}
 
                 {offering.price && (

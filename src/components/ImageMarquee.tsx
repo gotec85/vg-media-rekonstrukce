@@ -6,9 +6,10 @@ import { useState } from "react";
 type Props = {
   images: string[];
   alt: string;
+  reverse?: boolean;
 };
 
-export default function ImageMarquee({ images, alt }: Props) {
+export default function ImageMarquee({ images, alt, reverse = false }: Props) {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   const repeated = [...Array(3).fill(images).flat(), ...Array(3).fill(images).flat()];
@@ -16,7 +17,7 @@ export default function ImageMarquee({ images, alt }: Props) {
   return (
     <>
       <div className="marquee-fade relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-x-hidden overflow-y-visible py-3">
-        <div className="animate-marquee-slow flex w-max items-center gap-4 px-6 hover:[animation-play-state:paused] sm:gap-6">
+        <div className={`${reverse ? "animate-marquee-reverse" : "animate-marquee-slow"} flex w-max items-center gap-4 px-6 hover:[animation-play-state:paused] sm:gap-6`}>
           {repeated.map((image, index) => (
             <div
               key={`${image}-${index}`}
