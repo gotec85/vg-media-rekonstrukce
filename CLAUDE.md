@@ -8,7 +8,7 @@ Tento soubor dává Claude Code kontext pro práci na webu marketingové agentur
 - **Doména:** vgmedia.cz
 - **Kontakt:** info@vgmedia.cz, +420 724 250 607
 - **Jazyk webu:** pouze čeština (zatím žádná anglická/slovenská mutace)
-- **Stav:** aktuální web je jen dočasná "coming soon" stránka s logem a kontaktem — tenhle projekt je nový web od nuly
+- **Stav:** nový web je živý na vgmedia.cz (nasazen přes Vercel, auto-deploy z větve `main`)
 
 ### Čím se agentura zabývá
 Performance a AI-driven reklama. Konkrétní služby, které web musí komunikovat:
@@ -120,6 +120,7 @@ Doplňkové reference dohledané pro AI/performance pozicionování:
 ## 8. Konvence pro psaní kódu
 
 - Komponenty v `components/`, stránky v `app/`
+- `ImageMarquee` má prop `reverse?: boolean` — každý sudý offering (index 0, 2, ...) jede doleva, každý lichý (1, 3, ...) doprava. Animace `marquee-right` (@keyframes v globals.css) zajišťuje zpětný směr bez glitche.
 - Texty (copy) držet oddělené od komponent, pokud možno v konstantách/JSON — usnadní to pozdější úpravy textů bez zásahu do kódu
 - Commit messages v angličtině, stručné, imperativ ("add hero section", ne "added" nebo "přidávám hero")
 - Mobile-first přístup — většina návštěvníků z reklamy přijde z mobilu
